@@ -6,5 +6,12 @@ namespace E_Raport_SMA
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            DashboardGuru dashboardGuru = new DashboardGuru();
+            dashboardGuru.Show();
+            this.Hide();
+        }
     }
 }
