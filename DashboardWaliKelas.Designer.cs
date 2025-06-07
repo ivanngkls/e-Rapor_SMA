@@ -54,8 +54,9 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
             dataGridView1.Location = new Point(21, 88);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(551, 191);
+            dataGridView1.Size = new Size(547, 191);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // nis
             // 
@@ -86,11 +87,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(580, 298);
+            ClientSize = new Size(581, 298);
             Controls.Add(dataGridView1);
             Controls.Add(label1);
             Name = "DashboardWaliKelas";
-            Text = "DashboardWaliKelas";
+            Text = "Dashboard";
             Load += DashboardWaliKelas_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

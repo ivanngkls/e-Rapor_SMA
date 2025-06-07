@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace E_Raport_SMA
 {
-    public partial class DashboardWaliKelas : Form
+    public partial class CetakRapor : Form
     {
-        public DashboardWaliKelas()
+        public CetakRapor()
         {
             InitializeComponent();
-        }
-
-        private void DashboardWaliKelas_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -40,21 +40,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(184, 77);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(124, 43);
             label1.Name = "label1";
-            label1.Size = new Size(288, 45);
+            label1.Size = new Size(189, 30);
             label1.TabIndex = 0;
             label1.Text = "Login to E-Raport";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(103, 167);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(72, 100);
             label2.Name = "label2";
-            label2.Size = new Size(94, 20);
+            label2.Size = new Size(63, 13);
             label2.TabIndex = 1;
             label2.Text = "Username";
             // 
@@ -62,27 +61,26 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(106, 238);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(74, 143);
             label3.Name = "label3";
-            label3.Size = new Size(91, 20);
+            label3.Size = new Size(61, 13);
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
             // inputUsn
             // 
-            inputUsn.Location = new Point(207, 160);
-            inputUsn.Margin = new Padding(4, 5, 4, 5);
+            inputUsn.Location = new Point(145, 96);
             inputUsn.Name = "inputUsn";
-            inputUsn.Size = new Size(228, 31);
+            inputUsn.PlaceholderText = "Masukkan Username";
+            inputUsn.Size = new Size(161, 23);
             inputUsn.TabIndex = 3;
             // 
             // inputPassword
             // 
-            inputPassword.Location = new Point(207, 232);
-            inputPassword.Margin = new Padding(4, 5, 4, 5);
+            inputPassword.Location = new Point(145, 139);
             inputPassword.Name = "inputPassword";
-            inputPassword.Size = new Size(228, 31);
+            inputPassword.PlaceholderText = "Masukkan Password";
+            inputPassword.Size = new Size(161, 23);
             inputPassword.TabIndex = 4;
             // 
             // btnLogin
@@ -92,10 +90,9 @@
             btnLogin.CausesValidation = false;
             btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = SystemColors.ControlText;
-            btnLogin.Location = new Point(219, 323);
-            btnLogin.Margin = new Padding(4, 5, 4, 5);
+            btnLogin.Location = new Point(153, 194);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(190, 48);
+            btnLogin.Size = new Size(133, 29);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -103,17 +100,16 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(629, 497);
+            ClientSize = new Size(440, 298);
             Controls.Add(btnLogin);
             Controls.Add(inputPassword);
             Controls.Add(inputUsn);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
             Text = "Login";
             ResumeLayout(false);

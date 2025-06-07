@@ -1,6 +1,6 @@
 ﻿namespace E_Raport_SMA
 {
-    partial class DashboardGuru
+    partial class CetakRapor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,36 +29,53 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            semester = new ComboBox();
+            label2 = new Label();
             dataGridView1 = new DataGridView();
             nis = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
-            nilai = new DataGridViewTextBoxColumn();
-            inputNilai = new Button();
-            txtCari = new TextBox();
-            btnCari = new Button();
+            kelas = new DataGridViewTextBoxColumn();
+            cetak = new DataGridViewTextBoxColumn();
+            btnCetak = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(140, 18);
+            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(182, 21);
             label1.Name = "label1";
-            label1.Size = new Size(171, 30);
+            label1.Size = new Size(137, 24);
             label1.TabIndex = 0;
-            label1.Text = "Data Nilai Siswa";
+            label1.Text = "Rapor Siswa";
+            // 
+            // semester
+            // 
+            semester.FormattingEnabled = true;
+            semester.Location = new Point(106, 60);
+            semester.Name = "semester";
+            semester.Size = new Size(143, 23);
+            semester.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(35, 63);
+            label2.Name = "label2";
+            label2.Size = new Size(56, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Semester";
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
-            dataGridView1.Location = new Point(19, 97);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, cetak });
+            dataGridView1.Location = new Point(20, 92);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(430, 219);
-            dataGridView1.TabIndex = 1;
+            dataGridView1.Size = new Size(446, 138);
+            dataGridView1.TabIndex = 3;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // nis
@@ -71,52 +88,37 @@
             nama.HeaderText = "Nama Siswa";
             nama.Name = "nama";
             // 
-            // nilai
+            // kelas
             // 
-            nilai.HeaderText = "Nilai";
-            nilai.Name = "nilai";
+            kelas.HeaderText = "Kelas";
+            kelas.Name = "kelas";
             // 
-            // inputNilai
+            // cetak
             // 
-            inputNilai.BackColor = SystemColors.GradientActiveCaption;
-            inputNilai.Location = new Point(365, 322);
-            inputNilai.Name = "inputNilai";
-            inputNilai.Size = new Size(84, 25);
-            inputNilai.TabIndex = 2;
-            inputNilai.Text = "Input Nilai";
-            inputNilai.UseVisualStyleBackColor = false;
+            cetak.HeaderText = "Cetak";
+            cetak.Name = "cetak";
             // 
-            // txtCari
+            // btnCetak
             // 
-            txtCari.Location = new Point(79, 68);
-            txtCari.Name = "txtCari";
-            txtCari.PlaceholderText = "Cari Nama Siswa";
-            txtCari.Size = new Size(370, 23);
-            txtCari.TabIndex = 3;
+            btnCetak.Location = new Point(371, 236);
+            btnCetak.Name = "btnCetak";
+            btnCetak.Size = new Size(95, 23);
+            btnCetak.TabIndex = 4;
+            btnCetak.Text = "Cetak Rapor";
+            btnCetak.UseVisualStyleBackColor = true;
             // 
-            // btnCari
-            // 
-            btnCari.Location = new Point(22, 68);
-            btnCari.Name = "btnCari";
-            btnCari.Size = new Size(51, 23);
-            btnCari.TabIndex = 4;
-            btnCari.Text = "Cari";
-            btnCari.UseVisualStyleBackColor = true;
-            // 
-            // DashboardGuru
+            // CetakRapor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(487, 371);
-            Controls.Add(btnCari);
-            Controls.Add(txtCari);
-            Controls.Add(inputNilai);
+            ClientSize = new Size(496, 308);
+            Controls.Add(btnCetak);
             Controls.Add(dataGridView1);
+            Controls.Add(label2);
+            Controls.Add(semester);
             Controls.Add(label1);
-            Name = "DashboardGuru";
-            Text = "Dashboard";
-            Load += DashboardGuru_Load;
+            Name = "CetakRapor";
+            Text = "CetakRapor";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -125,12 +127,13 @@
         #endregion
 
         private Label label1;
+        private ComboBox semester;
+        private Label label2;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn nis;
         private DataGridViewTextBoxColumn nama;
-        private DataGridViewTextBoxColumn nilai;
-        private Button inputNilai;
-        private TextBox txtCari;
-        private Button btnCari;
+        private DataGridViewTextBoxColumn kelas;
+        private DataGridViewTextBoxColumn cetak;
+        private Button btnCetak;
     }
 }

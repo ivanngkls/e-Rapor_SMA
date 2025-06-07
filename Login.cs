@@ -13,5 +13,10 @@ namespace E_Raport_SMA
             dashboardGuru.Show();
             this.Hide();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
