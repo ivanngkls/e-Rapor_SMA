@@ -1,4 +1,6 @@
-namespace E_Raport_SMA
+namespace E_Raport_SMA;
+using MySql.Data.MySqlClient;
+
 {
     public partial class Login : Form
     {
@@ -10,13 +12,7 @@ namespace E_Raport_SMA
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DashboardGuru dashboardGuru = new DashboardGuru();
-            dashboardGuru.Show();
-            this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            string nip = 
         }
     }
 }

@@ -46,7 +46,6 @@
             label1.Size = new Size(288, 45);
             label1.TabIndex = 0;
             label1.Text = "Login to E-Raport";
-            label1.Click += label1_Click;
             // 
             // NIPLabel
             // 
