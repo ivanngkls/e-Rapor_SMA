@@ -31,8 +31,8 @@
             label1 = new Label();
             NIPLabel = new Label();
             label3 = new Label();
-            inputNIP = new TextBox();
-            inputPassword = new TextBox();
+            txtNIP = new TextBox();
+            txtPassword = new TextBox();
             btnLogin = new Button();
             SuspendLayout();
             // 
@@ -69,23 +69,24 @@
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
-            // inputNIP
+            // txtNIP
             // 
-            inputNIP.Location = new Point(207, 160);
-            inputNIP.Margin = new Padding(4, 5, 4, 5);
-            inputNIP.Name = "inputNIP";
-            inputNIP.PlaceholderText = "Masukkan NIP";
-            inputNIP.Size = new Size(228, 31);
-            inputNIP.TabIndex = 3;
+            txtNIP.Location = new Point(207, 160);
+            txtNIP.Margin = new Padding(4, 5, 4, 5);
+            txtNIP.Name = "txtNIP";
+            txtNIP.PlaceholderText = "Masukkan NIP";
+            txtNIP.Size = new Size(228, 31);
+            txtNIP.TabIndex = 3;
             // 
-            // inputPassword
+            // txtPassword
             // 
-            inputPassword.Location = new Point(207, 232);
-            inputPassword.Margin = new Padding(4, 5, 4, 5);
-            inputPassword.Name = "inputPassword";
-            inputPassword.PlaceholderText = "Masukkan Password";
-            inputPassword.Size = new Size(228, 31);
-            inputPassword.TabIndex = 4;
+            txtPassword.Location = new Point(207, 232);
+            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "Masukkan Password";
+            txtPassword.Size = new Size(228, 31);
+            txtPassword.TabIndex = 4;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -110,8 +111,8 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(629, 497);
             Controls.Add(btnLogin);
-            Controls.Add(inputPassword);
-            Controls.Add(inputNIP);
+            Controls.Add(txtPassword);
+            Controls.Add(txtNIP);
             Controls.Add(label3);
             Controls.Add(NIPLabel);
             Controls.Add(label1);
@@ -127,8 +128,8 @@
         private Label label1;
         private Label NIPLabel;
         private Label label3;
-        private TextBox inputNIP;
-        private TextBox inputPassword;
+        private TextBox txtNIP;
+        private TextBox txtPassword;
         private Button btnLogin;
     }
 }
