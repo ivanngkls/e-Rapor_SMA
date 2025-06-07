@@ -7,14 +7,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace E_Raport_SMA
 {
     public partial class Home : Form
     {
-        public Home()
+        private string nip;
+        public Home(string nip)
         {
             InitializeComponent();
+            this.nip = nip;
+            LoadData();
+
+        }
+
+        private void LoadData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT is_walikelas FROM guru WHERE nip = @nip";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@nip", this.nip);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        bool isWalikelas = reader.GetBoolean("is_walikelas");
+                        if (!isWalikelas)
+                        {
+                            kelasButton.Hide();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    {
+                        MessageBox.Show("Gagal mengambil data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }
