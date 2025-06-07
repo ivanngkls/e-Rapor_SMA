@@ -45,7 +45,7 @@
             // 
             // inputNilaiButton
             // 
-            inputNilaiButton.Location = new Point(215, 247);
+            inputNilaiButton.Location = new Point(343, 155);
             inputNilaiButton.Name = "inputNilaiButton";
             inputNilaiButton.Size = new Size(112, 34);
             inputNilaiButton.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // kelasButton
             // 
-            kelasButton.Location = new Point(484, 247);
+            kelasButton.Location = new Point(343, 205);
             kelasButton.Name = "kelasButton";
             kelasButton.Size = new Size(112, 34);
             kelasButton.TabIndex = 2;
