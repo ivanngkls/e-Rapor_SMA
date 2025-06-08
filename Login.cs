@@ -11,7 +11,6 @@ namespace E_Raport_SMA
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DashboardGuru dashboardGuru = new DashboardGuru();
             string nip = txtNIP.Text.Trim();
             string password = txtPassword.Text.Trim();
                
