@@ -115,12 +115,12 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 257);
+            label6.Location = new Point(23, 248);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(47, 28);
+            label6.Size = new Size(52, 28);
             label6.TabIndex = 4;
-            label6.Text = "Niai";
+            label6.Text = "Nilai";
             // 
             // label5
             // 
