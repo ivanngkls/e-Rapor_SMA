@@ -18,6 +18,7 @@ namespace E_Raport_SMA
             if(string.IsNullOrEmpty(nip) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("NIP dan Password harus diisi.", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
 
             }
 
@@ -27,7 +28,7 @@ namespace E_Raport_SMA
                     conn.Open();
                     string query = "SELECT password FROM guru WHERE nip = @nip";
                     MySqlCommand cmd  = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("nip", @nip);
+                    cmd.Parameters.AddWithValue("@nip", nip);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -44,7 +45,7 @@ namespace E_Raport_SMA
                         }
                         else
                         {
-
+                            MessageBox.Show("Username atau Password Salah", "Invalid", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                         }
                     }
                 }

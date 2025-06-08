@@ -29,18 +29,20 @@ namespace E_Raport_SMA
                 try
                 {
                     conn.Open();
-                    string query = "SELECT is_walikelas FROM guru WHERE nip = @nip";
+                    string query = "SELECT nama,is_walikelas FROM guru WHERE nip = @nip";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nip", this.nip);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
                     {
+                        string namaGuru = reader["nama"].ToString();
                         bool isWalikelas = reader.GetBoolean("is_walikelas");
                         if (!isWalikelas)
                         {
                             kelasButton.Hide();
                         }
+                        welcomeLabel.Text += $" {namaGuru}";
                     }
                 }
                 catch (Exception ex)
