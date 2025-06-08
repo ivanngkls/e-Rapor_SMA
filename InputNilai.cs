@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace E_Raport_SMA
         public InputNilai()
         {
             InitializeComponent();
+            loadData();
+        }
+
+        private void loadData()
+        {
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM siswa";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+
+                    }
+                }
+                catch
+                {
+
+                }
+            }
         }
     }
 }
