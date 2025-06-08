@@ -30,11 +30,12 @@
         {
             label1 = new Label();
             dgvSiswa = new DataGridView();
+            nis = new DataGridViewTextBoxColumn();
+            nama = new DataGridViewTextBoxColumn();
+            nilai = new DataGridViewTextBoxColumn();
             inputNilai = new Button();
             txtCari = new TextBox();
             btnCari = new Button();
-            nis = new DataGridViewTextBoxColumn();
-            nama = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvSiswa).BeginInit();
             SuspendLayout();
             // 
@@ -54,13 +55,38 @@
             dgvSiswa.BackgroundColor = Color.White;
             dgvSiswa.BorderStyle = BorderStyle.Fixed3D;
             dgvSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama });
+            dgvSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
             dgvSiswa.Location = new Point(27, 162);
             dgvSiswa.Margin = new Padding(4, 5, 4, 5);
             dgvSiswa.Name = "dgvSiswa";
             dgvSiswa.RowHeadersWidth = 62;
             dgvSiswa.Size = new Size(614, 365);
             dgvSiswa.TabIndex = 1;
+            dgvSiswa.CellClick += dgvSiswa_CellClick;
+            // 
+            // nis
+            // 
+            nis.DataPropertyName = "nis";
+            nis.HeaderText = "NIS";
+            nis.MinimumWidth = 8;
+            nis.Name = "nis";
+            nis.Width = 150;
+            // 
+            // nama
+            // 
+            nama.DataPropertyName = "nama";
+            nama.HeaderText = "Nama Siswa";
+            nama.MinimumWidth = 8;
+            nama.Name = "nama";
+            nama.Width = 150;
+            // 
+            // nilai
+            // 
+            nilai.DataPropertyName = "nilai";
+            nilai.HeaderText = "Nilai";
+            nilai.MinimumWidth = 8;
+            nilai.Name = "nilai";
+            nilai.Width = 150;
             // 
             // inputNilai
             // 
@@ -72,6 +98,7 @@
             inputNilai.TabIndex = 2;
             inputNilai.Text = "Input Nilai";
             inputNilai.UseVisualStyleBackColor = false;
+            inputNilai.Click += inputNilai_Click;
             // 
             // txtCari
             // 
@@ -91,22 +118,6 @@
             btnCari.TabIndex = 4;
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = true;
-            // 
-            // nis
-            // 
-            nis.DataPropertyName = "nis";
-            nis.HeaderText = "NIS";
-            nis.MinimumWidth = 8;
-            nis.Name = "nis";
-            nis.Width = 150;
-            // 
-            // nama
-            // 
-            nama.DataPropertyName = "nama";
-            nama.HeaderText = "Nama Siswa";
-            nama.MinimumWidth = 8;
-            nama.Name = "nama";
-            nama.Width = 150;
             // 
             // DashboardGuru
             // 
@@ -136,5 +147,6 @@
         private Button btnCari;
         private DataGridViewTextBoxColumn nis;
         private DataGridViewTextBoxColumn nama;
+        private DataGridViewTextBoxColumn nilai;
     }
 }
