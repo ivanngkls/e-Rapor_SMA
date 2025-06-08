@@ -29,7 +29,7 @@ namespace E_Raport_SMA
                 try
                 {
                     conn.Open();
-                    string query = "SELECT nama,is_walikelas FROM guru WHERE nip = @nip";
+                    string query = "SELECT nama, is_walikelas FROM guru WHERE nip = @nip";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nip", this.nip);
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -56,7 +56,7 @@ namespace E_Raport_SMA
 
         private void inputNilaiButton_Click(object sender, EventArgs e)
         {
-            DashboardGuru dashboardGuru = new DashboardGuru();
+            DashboardGuru dashboardGuru = new DashboardGuru(this.nip);
             this.Hide();
             dashboardGuru.Show();
         }
