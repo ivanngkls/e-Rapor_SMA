@@ -13,32 +13,17 @@ namespace E_Raport_SMA
 {
     public partial class InputNilai : Form
     {
-        public InputNilai()
+        public InputNilai(string namaSiswa, string NIS, double nilai)
         {
             InitializeComponent();
-            loadData();
+            loadData(namaSiswa, NIS, nilai);
         }
 
-        private void loadData()
+        private void loadData(string nama, string nis, double nilai)
         {
-            using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT * FROM siswa";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-
-                    }
-                }
-                catch
-                {
-
-                }
-            }
+            inputNama.Text = nama;
+            inputNis.Text = nis;
+            inpNilai.Text = nilai.ToString();
         }
     }
 }
