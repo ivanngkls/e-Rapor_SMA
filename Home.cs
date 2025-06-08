@@ -42,7 +42,7 @@ namespace E_Raport_SMA
                         {
                             kelasButton.Hide();
                         }
-                        welcomeLabel.Text += $" {namaGuru}";
+                        welcomeLabel.Text += $"\n {namaGuru}";
                     }
                 }
                 catch (Exception ex)
@@ -52,6 +52,20 @@ namespace E_Raport_SMA
                     }
                 }
             }
+        }
+
+        private void inputNilaiButton_Click(object sender, EventArgs e)
+        {
+            DashboardGuru dashboardGuru = new DashboardGuru();
+            this.Hide();
+            dashboardGuru.Show();
+        }
+
+        private void kelasButton_Click(object sender, EventArgs e)
+        {
+            DashboardWaliKelas dashboardWaliKelas = new DashboardWaliKelas();
+            this.Hide();
+            dashboardWaliKelas.Show();
         }
     }
 }

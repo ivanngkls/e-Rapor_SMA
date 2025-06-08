@@ -37,11 +37,12 @@
             // 
             welcomeLabel.AutoSize = true;
             welcomeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.Location = new Point(311, 82);
+            welcomeLabel.Location = new Point(310, 86);
             welcomeLabel.Name = "welcomeLabel";
             welcomeLabel.Size = new Size(183, 32);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
+            welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // inputNilaiButton
             // 
@@ -51,6 +52,7 @@
             inputNilaiButton.TabIndex = 1;
             inputNilaiButton.Text = "Input Nilai";
             inputNilaiButton.UseVisualStyleBackColor = true;
+            inputNilaiButton.Click += inputNilaiButton_Click;
             // 
             // kelasButton
             // 
@@ -60,6 +62,7 @@
             kelasButton.TabIndex = 2;
             kelasButton.Text = "Lihat Kelas";
             kelasButton.UseVisualStyleBackColor = true;
+            kelasButton.Click += kelasButton_Click;
             // 
             // Home
             // 
