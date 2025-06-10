@@ -50,7 +50,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(337, 0);
+
+            label1.Location = new Point(344, 47);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(183, 45);
@@ -59,16 +60,16 @@
             // 
             // dataSiswa
             // 
+
             dataSiswa.BackgroundColor = Color.White;
-            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
-            dataSiswa.Location = new Point(23, 113);
-            dataSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataSiswa.Name = "dataSiswa";
-            dataSiswa.RowHeadersWidth = 62;
-            dataSiswa.Size = new Size(781, 323);
-            dataSiswa.TabIndex = 1;
-            dataSiswa.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
+            dataGridView1.Location = new Point(30, 147);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(781, 318);
+            dataGridView1.TabIndex = 1;
             // 
             // nis
             // 
@@ -104,6 +105,7 @@
             nilaisiswa.MinimumWidth = 8;
             nilaisiswa.Name = "nilaisiswa";
             nilaisiswa.Width = 150;
+
             // 
             // groupBox1
             // 
@@ -178,6 +180,7 @@
             updateSiswa.TabIndex = 6;
             updateSiswa.Text = "Update Siswa";
             updateSiswa.UseVisualStyleBackColor = true;
+
             // 
             // DashboardWaliKelas
             // 
@@ -190,6 +193,7 @@
             Controls.Add(btnLihatRapor);
             Controls.Add(btnBack2);
             Controls.Add(groupBox1);
+
             Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardWaliKelas";
             Text = "Dashboard Wali Kelas";

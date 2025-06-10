@@ -37,12 +37,14 @@
             // welcomeLabel
             // 
             welcomeLabel.AutoSize = true;
+
             welcomeLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             welcomeLabel.Location = new Point(305, 73);
             welcomeLabel.Name = "welcomeLabel";
             welcomeLabel.Size = new Size(417, 70);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
+            welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // inputNilaiButton
             // 
@@ -62,6 +64,7 @@
             kelasButton.TabIndex = 2;
             kelasButton.Text = "Lihat Kelas";
             kelasButton.UseVisualStyleBackColor = true;
+            kelasButton.Click += kelasButton_Click;
             // 
             // button1
             // 

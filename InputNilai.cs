@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,17 @@ namespace E_Raport_SMA
 {
     public partial class InputNilai : Form
     {
-        public InputNilai()
+        public InputNilai(string namaSiswa, string NIS, double nilai)
         {
             InitializeComponent();
+            loadData(namaSiswa, NIS, nilai);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void loadData(string nama, string nis, double nilai)
         {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            inputNama.Text = nama;
+            inputNis.Text = nis;
+            inpNilai.Text = nilai.ToString();
         }
 
         private void InputNilai_Load(object sender, EventArgs e)

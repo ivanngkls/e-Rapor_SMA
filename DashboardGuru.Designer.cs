@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataNilaiSiswa = new DataGridView();
+            label1 = new Label();
+            dgvSiswa = new DataGridView();
             nis = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
             nilai = new DataGridViewTextBoxColumn();
@@ -38,26 +39,37 @@
             btnLogout = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
-            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSiswa).BeginInit();
             SuspendLayout();
             // 
             // dataNilaiSiswa
             // 
-            dataNilaiSiswa.BackgroundColor = Color.White;
-            dataNilaiSiswa.BorderStyle = BorderStyle.Fixed3D;
-            dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataNilaiSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
-            dataNilaiSiswa.Location = new Point(164, 158);
-            dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataNilaiSiswa.Name = "dataNilaiSiswa";
-            dataNilaiSiswa.RowHeadersWidth = 62;
-            dataNilaiSiswa.Size = new Size(614, 365);
-            dataNilaiSiswa.TabIndex = 1;
-            dataNilaiSiswa.CellContentClick += dataGridView1_CellContentClick;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(200, 30);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(261, 45);
+            label1.TabIndex = 0;
+            label1.Text = "Data Nilai Siswa";
+            // 
+            // dgvSiswa
+            // 
+            dgvSiswa.BackgroundColor = Color.White;
+            dgvSiswa.BorderStyle = BorderStyle.Fixed3D;
+            dgvSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
+            dgvSiswa.Location = new Point(27, 162);
+            dgvSiswa.Margin = new Padding(4, 5, 4, 5);
+            dgvSiswa.Name = "dgvSiswa";
+            dgvSiswa.RowHeadersWidth = 62;
+            dgvSiswa.Size = new Size(614, 365);
+            dgvSiswa.TabIndex = 1;
+            dgvSiswa.CellClick += dgvSiswa_CellClick;
             // 
             // nis
             // 
+            nis.DataPropertyName = "nis";
             nis.HeaderText = "NIS";
             nis.MinimumWidth = 8;
             nis.Name = "nis";
@@ -65,6 +77,7 @@
             // 
             // nama
             // 
+            nama.DataPropertyName = "nama";
             nama.HeaderText = "Nama Siswa";
             nama.MinimumWidth = 8;
             nama.Name = "nama";
@@ -72,6 +85,7 @@
             // 
             // nilai
             // 
+            nilai.DataPropertyName = "nilai";
             nilai.HeaderText = "Nilai";
             nilai.MinimumWidth = 8;
             nilai.Name = "nilai";
@@ -79,18 +93,19 @@
             // 
             // inputNilai
             // 
-            inputNilai.BackColor = Color.Transparent;
-            inputNilai.Location = new Point(164, 533);
+            inputNilai.BackColor = SystemColors.GradientActiveCaption;
+            inputNilai.Location = new Point(521, 537);
             inputNilai.Margin = new Padding(4, 5, 4, 5);
             inputNilai.Name = "inputNilai";
             inputNilai.Size = new Size(120, 42);
             inputNilai.TabIndex = 2;
             inputNilai.Text = "Input Nilai";
             inputNilai.UseVisualStyleBackColor = false;
+            inputNilai.Click += inputNilai_Click;
             // 
             // txtCari
             // 
-            txtCari.Location = new Point(249, 113);
+            txtCari.Location = new Point(113, 113);
             txtCari.Margin = new Padding(4, 5, 4, 5);
             txtCari.Name = "txtCari";
             txtCari.PlaceholderText = "Cari Nama Siswa";
