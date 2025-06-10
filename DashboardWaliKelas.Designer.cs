@@ -36,10 +36,10 @@
             btnCariSiswa = new Button();
             cariTxt = new TextBox();
             groupBox1 = new GroupBox();
-            dataSiswa = new DataGridView();
-            prevBtn = new Button();
-            nextBtn = new Button();
             pageInfoLabel = new Label();
+            nextBtn = new Button();
+            prevBtn = new Button();
+            dataSiswa = new DataGridView();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             SuspendLayout();
@@ -131,26 +131,14 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // dataSiswa
+            // pageInfoLabel
             // 
-            dataSiswa.BackgroundColor = Color.White;
-            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataSiswa.Location = new Point(16, 129);
-            dataSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataSiswa.Name = "dataSiswa";
-            dataSiswa.RowHeadersWidth = 62;
-            dataSiswa.Size = new Size(814, 287);
-            dataSiswa.TabIndex = 4;
-            // 
-            // prevBtn
-            // 
-            prevBtn.Location = new Point(16, 426);
-            prevBtn.Margin = new Padding(4, 5, 4, 5);
-            prevBtn.Name = "prevBtn";
-            prevBtn.Size = new Size(89, 38);
-            prevBtn.TabIndex = 7;
-            prevBtn.Text = "< Prev";
-            prevBtn.UseVisualStyleBackColor = true;
+            pageInfoLabel.AutoSize = true;
+            pageInfoLabel.Location = new Point(698, 433);
+            pageInfoLabel.Name = "pageInfoLabel";
+            pageInfoLabel.Size = new Size(132, 25);
+            pageInfoLabel.TabIndex = 9;
+            pageInfoLabel.Text = "Halaman 1 dari";
             // 
             // nextBtn
             // 
@@ -161,15 +149,29 @@
             nextBtn.TabIndex = 8;
             nextBtn.Text = "Next >";
             nextBtn.UseVisualStyleBackColor = true;
+            nextBtn.Click += nextBtn_Click;
             // 
-            // pageInfoLabel
+            // prevBtn
             // 
-            pageInfoLabel.AutoSize = true;
-            pageInfoLabel.Location = new Point(698, 433);
-            pageInfoLabel.Name = "pageInfoLabel";
-            pageInfoLabel.Size = new Size(132, 25);
-            pageInfoLabel.TabIndex = 9;
-            pageInfoLabel.Text = "Halaman 1 dari";
+            prevBtn.Location = new Point(16, 426);
+            prevBtn.Margin = new Padding(4, 5, 4, 5);
+            prevBtn.Name = "prevBtn";
+            prevBtn.Size = new Size(89, 38);
+            prevBtn.TabIndex = 7;
+            prevBtn.Text = "< Prev";
+            prevBtn.UseVisualStyleBackColor = true;
+            prevBtn.Click += prevBtn_Click;
+            // 
+            // dataSiswa
+            // 
+            dataSiswa.BackgroundColor = Color.White;
+            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataSiswa.Location = new Point(16, 129);
+            dataSiswa.Margin = new Padding(4, 5, 4, 5);
+            dataSiswa.Name = "dataSiswa";
+            dataSiswa.RowHeadersWidth = 62;
+            dataSiswa.Size = new Size(814, 287);
+            dataSiswa.TabIndex = 4;
             // 
             // DashboardWaliKelas
             // 

@@ -58,9 +58,9 @@ namespace E_Raport_SMA
                     MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
                     totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
 
-                    totalPages =(int)Math.Ceiling((double)totalRecords/pageSize);
-                    if(currentPage > totalPages) currentPage = totalPages;
-                    if(currentPage < 1) currentPage = 1;
+                    totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+                    if (currentPage > totalPages) currentPage = totalPages;
+                    if (currentPage < 1) currentPage = 1;
 
                     int offset = (currentPage - 1) * pageSize;
 
@@ -78,11 +78,28 @@ namespace E_Raport_SMA
                     pageInfoLabel.Text = $"Halaman {currentPage} dari {totalPages}";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Gagal menampilkan data siswa: " + ex, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        private void prevBtn_Click(object sender, EventArgs e)
+        {
+            if (currentPage > totalPages)
+            {
+                currentPage--;
+                Load_DataSiswa();
+            }
+        }
+
+        private void nextBtn_Click(object sender, EventArgs e)
+        {
+            if (currentPage < totalPages) 
+            {
+                currentPage++;
+                Load_DataSiswa();
+            }
+        }
     }
 }
