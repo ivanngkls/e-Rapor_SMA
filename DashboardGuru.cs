@@ -50,7 +50,7 @@ namespace E_Raport_SMA
                     MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
-                    dgvSiswa.DataSource = dt;
+                    dataNilaiSiswa.DataSource = dt;
                 }
                 catch (Exception ex)
                 {
@@ -61,12 +61,12 @@ namespace E_Raport_SMA
 
         private void dgvSiswa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                //DataGridViewRow row = dgvSiswa.Rows[e.RowIndex];
-                //selectedNIS = row.Cells["nis"].Value.ToString();
-                //selectedNama = row.Cells["nama"].Value.ToString();
-                //selectedNilai = Convert.ToDouble(row.Cells["nilai_angka"].Value);
+                DataGridViewRow row = dataNilaiSiswa.Rows[e.RowIndex];
+                selectedNIS = row.Cells["nis"].Value.ToString();
+                selectedNama = row.Cells["nama"].Value.ToString();
+                selectedNilai = Convert.ToDouble(row.Cells["nilai_angka"].Value);
             }
         }
 
@@ -77,6 +77,11 @@ namespace E_Raport_SMA
             this.Hide();
             InputNilai formNilai = new InputNilai(selectedNama, selectedNIS, selectedNilai);
             formNilai.Show();
+        }
+
+        private void txtCari_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,33 +37,33 @@
             txtCari = new TextBox();
             btnCari = new Button();
             btnLogout = new Button();
-            label1 = new Label();
             groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataNilaiSiswa
+            // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(200, 30);
+            label1.Location = new Point(183, 11);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(261, 45);
             label1.TabIndex = 0;
             label1.Text = "Data Nilai Siswa";
             // 
-            // dgvSiswa
+            // dataNilaiSiswa
             // 
             dataNilaiSiswa.BackgroundColor = Color.White;
             dataNilaiSiswa.BorderStyle = BorderStyle.Fixed3D;
             dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataNilaiSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
-            dataNilaiSiswa.Location = new Point(27, 162);
+            dataNilaiSiswa.Location = new Point(99, 159);
             dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataNilaiSiswa.Name = "dgvSiswa";
+            dataNilaiSiswa.Name = "dataNilaiSiswa";
             dataNilaiSiswa.RowHeadersWidth = 62;
-            dataNilaiSiswa.Size = new Size(614, 365);
+            dataNilaiSiswa.Size = new Size(620, 365);
             dataNilaiSiswa.TabIndex = 1;
             dataNilaiSiswa.CellClick += dgvSiswa_CellClick;
             // 
@@ -93,8 +93,8 @@
             // 
             // inputNilai
             // 
-            inputNilai.BackColor = SystemColors.GradientActiveCaption;
-            inputNilai.Location = new Point(521, 537);
+            inputNilai.BackColor = Color.Transparent;
+            inputNilai.Location = new Point(452, 538);
             inputNilai.Margin = new Padding(4, 5, 4, 5);
             inputNilai.Name = "inputNilai";
             inputNilai.Size = new Size(120, 42);
@@ -105,7 +105,7 @@
             // 
             // txtCari
             // 
-            txtCari.Location = new Point(113, 113);
+            txtCari.Location = new Point(192, 114);
             txtCari.Margin = new Padding(4, 5, 4, 5);
             txtCari.Name = "txtCari";
             txtCari.PlaceholderText = "Cari Nama Siswa";
@@ -114,7 +114,7 @@
             // 
             // btnCari
             // 
-            btnCari.Location = new Point(168, 109);
+            btnCari.Location = new Point(99, 110);
             btnCari.Margin = new Padding(4, 5, 4, 5);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(73, 38);
@@ -125,7 +125,7 @@
             // btnLogout
             // 
             btnLogout.BackColor = Color.Transparent;
-            btnLogout.Location = new Point(658, 533);
+            btnLogout.Location = new Point(589, 534);
             btnLogout.Margin = new Padding(4, 5, 4, 5);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(120, 42);
@@ -133,21 +133,10 @@
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(182, 9);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(261, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Data Nilai Siswa";
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(168, 24);
+            groupBox1.Location = new Point(99, 25);
             groupBox1.Margin = new Padding(4, 5, 4, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 5, 4, 5);
@@ -160,7 +149,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
-            ClientSize = new Size(976, 628);
+            ClientSize = new Size(833, 590);
             Controls.Add(groupBox1);
             Controls.Add(btnLogout);
             Controls.Add(btnCari);
