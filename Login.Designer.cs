@@ -40,10 +40,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(177, 72);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(124, 43);
             label1.Name = "label1";
-            label1.Size = new Size(288, 45);
+            label1.Size = new Size(189, 30);
             label1.TabIndex = 0;
             label1.Text = "Login to E-Raport";
             // 
@@ -51,10 +50,9 @@
             // 
             NIPLabel.AutoSize = true;
             NIPLabel.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NIPLabel.Location = new Point(103, 167);
-            NIPLabel.Margin = new Padding(4, 0, 4, 0);
+            NIPLabel.Location = new Point(72, 100);
             NIPLabel.Name = "NIPLabel";
-            NIPLabel.Size = new Size(39, 20);
+            NIPLabel.Size = new Size(28, 13);
             NIPLabel.TabIndex = 1;
             NIPLabel.Text = "NIP";
             // 
@@ -62,43 +60,39 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(106, 238);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(74, 143);
             label3.Name = "label3";
-            label3.Size = new Size(91, 20);
+            label3.Size = new Size(61, 13);
             label3.TabIndex = 2;
             label3.Text = "Password";
             // 
             // txtNIP
             // 
-            txtNIP.Location = new Point(207, 160);
-            txtNIP.Margin = new Padding(4, 5, 4, 5);
+            txtNIP.Location = new Point(145, 96);
             txtNIP.Name = "txtNIP";
             txtNIP.PlaceholderText = "Masukkan NIP";
-            txtNIP.Size = new Size(228, 31);
+            txtNIP.Size = new Size(161, 23);
             txtNIP.TabIndex = 3;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(207, 232);
-            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Location = new Point(145, 139);
             txtPassword.Name = "txtPassword";
             txtPassword.PlaceholderText = "Masukkan Password";
-            txtPassword.Size = new Size(228, 31);
+            txtPassword.Size = new Size(161, 23);
             txtPassword.TabIndex = 4;
             txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = SystemColors.InactiveCaption;
+            btnLogin.BackColor = Color.Transparent;
             btnLogin.BackgroundImageLayout = ImageLayout.Center;
             btnLogin.CausesValidation = false;
             btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = SystemColors.ControlText;
-            btnLogin.Location = new Point(219, 323);
-            btnLogin.Margin = new Padding(4, 5, 4, 5);
+            btnLogin.Location = new Point(153, 194);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(190, 48);
+            btnLogin.Size = new Size(133, 29);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -106,17 +100,16 @@
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(629, 497);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(440, 298);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtNIP);
             Controls.Add(label3);
             Controls.Add(NIPLabel);
             Controls.Add(label1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
             Text = "Login";
             ResumeLayout(false);

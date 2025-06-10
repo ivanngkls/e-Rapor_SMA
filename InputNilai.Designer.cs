@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            inputNis = new TextBox();
-            inputNama = new TextBox();
-            inpNilai = new TextBox();
-            comboBoxMapel = new ComboBox();
             comboBoxSemester = new ComboBox();
+            comboBoxMapel = new ComboBox();
+            inpNilai = new TextBox();
+            inputNama = new TextBox();
+            inputNis = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             btnSimpan = new Button();
             btnBatal = new Button();
             groupBox2 = new GroupBox();
@@ -69,24 +69,69 @@
             groupBox1.Text = "Form Input Nilai";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // label1
+            // comboBoxSemester
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(169, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(179, 24);
-            label1.TabIndex = 1;
-            label1.Text = "Input Nilai Siswa";
+            comboBoxSemester.FormattingEnabled = true;
+            comboBoxSemester.Location = new Point(135, 115);
+            comboBoxSemester.Name = "comboBoxSemester";
+            comboBoxSemester.Size = new Size(177, 25);
+            comboBoxSemester.TabIndex = 11;
             // 
-            // label2
+            // comboBoxMapel
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(16, 30);
-            label2.Name = "label2";
-            label2.Size = new Size(29, 17);
-            label2.TabIndex = 0;
-            label2.Text = "NIS";
+            comboBoxMapel.FormattingEnabled = true;
+            comboBoxMapel.Location = new Point(135, 84);
+            comboBoxMapel.Name = "comboBoxMapel";
+            comboBoxMapel.Size = new Size(177, 25);
+            comboBoxMapel.TabIndex = 10;
+            // 
+            // inpNilai
+            // 
+            inpNilai.Location = new Point(135, 146);
+            inpNilai.Name = "inpNilai";
+            inpNilai.Size = new Size(177, 25);
+            inpNilai.TabIndex = 9;
+            // 
+            // inputNama
+            // 
+            inputNama.Location = new Point(135, 53);
+            inputNama.Name = "inputNama";
+            inputNama.Size = new Size(177, 25);
+            inputNama.TabIndex = 6;
+            // 
+            // inputNis
+            // 
+            inputNis.Location = new Point(135, 22);
+            inputNis.Name = "inputNis";
+            inputNis.Size = new Size(177, 25);
+            inputNis.TabIndex = 5;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(14, 154);
+            label6.Name = "label6";
+            label6.Size = new Size(31, 17);
+            label6.TabIndex = 4;
+            label6.Text = "Niai";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(14, 123);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 17);
+            label5.TabIndex = 3;
+            label5.Text = "Semester";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(14, 92);
+            label4.Name = "label4";
+            label4.Size = new Size(45, 17);
+            label4.TabIndex = 2;
+            label4.Text = "Mapel";
             // 
             // label3
             // 
@@ -98,69 +143,24 @@
             label3.Text = "Nama Siswa";
             label3.Click += label3_Click;
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(14, 92);
-            label4.Name = "label4";
-            label4.Size = new Size(45, 17);
-            label4.TabIndex = 2;
-            label4.Text = "Mapel";
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 30);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 17);
+            label2.TabIndex = 0;
+            label2.Text = "NIS";
             // 
-            // label5
+            // label1
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(14, 123);
-            label5.Name = "label5";
-            label5.Size = new Size(64, 17);
-            label5.TabIndex = 3;
-            label5.Text = "Semester";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(14, 154);
-            label6.Name = "label6";
-            label6.Size = new Size(31, 17);
-            label6.TabIndex = 4;
-            label6.Text = "Niai";
-            // 
-            // inputNis
-            // 
-            inputNis.Location = new Point(135, 22);
-            inputNis.Name = "inputNis";
-            inputNis.Size = new Size(177, 25);
-            inputNis.TabIndex = 5;
-            // 
-            // inputNama
-            // 
-            inputNama.Location = new Point(135, 53);
-            inputNama.Name = "inputNama";
-            inputNama.Size = new Size(177, 25);
-            inputNama.TabIndex = 6;
-            // 
-            // inpNilai
-            // 
-            inpNilai.Location = new Point(135, 146);
-            inpNilai.Name = "inpNilai";
-            inpNilai.Size = new Size(177, 25);
-            inpNilai.TabIndex = 9;
-            // 
-            // comboBoxMapel
-            // 
-            comboBoxMapel.FormattingEnabled = true;
-            comboBoxMapel.Location = new Point(135, 84);
-            comboBoxMapel.Name = "comboBoxMapel";
-            comboBoxMapel.Size = new Size(177, 25);
-            comboBoxMapel.TabIndex = 10;
-            // 
-            // comboBoxSemester
-            // 
-            comboBoxSemester.FormattingEnabled = true;
-            comboBoxSemester.Location = new Point(135, 115);
-            comboBoxSemester.Name = "comboBoxSemester";
-            comboBoxSemester.Size = new Size(177, 25);
-            comboBoxSemester.TabIndex = 11;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(169, 26);
+            label1.Name = "label1";
+            label1.Size = new Size(180, 30);
+            label1.TabIndex = 1;
+            label1.Text = "Input Nilai Siswa";
             // 
             // btnSimpan
             // 
@@ -200,6 +200,7 @@
             Controls.Add(groupBox1);
             Name = "InputNilai";
             Text = "InputNilai";
+            Load += InputNilai_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

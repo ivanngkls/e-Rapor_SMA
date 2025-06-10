@@ -26,5 +26,10 @@ namespace E_Raport_SMA
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

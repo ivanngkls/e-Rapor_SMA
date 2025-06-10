@@ -26,5 +26,10 @@ namespace E_Raport_SMA
         {
 
         }
+
+        private void InputNilai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

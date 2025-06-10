@@ -37,23 +37,26 @@
             kelas = new DataGridViewTextBoxColumn();
             cetak = new DataGridViewTextBoxColumn();
             btnCetak = new Button();
+            btnBack = new Button();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(182, 21);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(165, 7);
             label1.Name = "label1";
-            label1.Size = new Size(137, 24);
+            label1.Size = new Size(133, 30);
             label1.TabIndex = 0;
             label1.Text = "Rapor Siswa";
             // 
             // semester
             // 
             semester.FormattingEnabled = true;
-            semester.Location = new Point(106, 60);
+            semester.Location = new Point(91, 49);
             semester.Name = "semester";
             semester.Size = new Size(143, 23);
             semester.TabIndex = 1;
@@ -62,7 +65,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(35, 63);
+            label2.Location = new Point(20, 52);
             label2.Name = "label2";
             label2.Size = new Size(56, 15);
             label2.TabIndex = 2;
@@ -100,28 +103,48 @@
             // 
             // btnCetak
             // 
-            btnCetak.Location = new Point(371, 236);
+            btnCetak.Location = new Point(20, 236);
             btnCetak.Name = "btnCetak";
             btnCetak.Size = new Size(95, 23);
             btnCetak.TabIndex = 4;
             btnCetak.Text = "Cetak Rapor";
             btnCetak.UseVisualStyleBackColor = true;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(121, 236);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(95, 23);
+            btnBack.TabIndex = 5;
+            btnBack.Text = "Kembali";
+            btnBack.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(semester);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(20, 8);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(446, 78);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            // 
             // CetakRapor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(496, 308);
+            Controls.Add(groupBox1);
+            Controls.Add(btnBack);
             Controls.Add(btnCetak);
             Controls.Add(dataGridView1);
-            Controls.Add(label2);
-            Controls.Add(semester);
-            Controls.Add(label1);
             Name = "CetakRapor";
             Text = "CetakRapor";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -135,5 +158,7 @@
         private DataGridViewTextBoxColumn kelas;
         private DataGridViewTextBoxColumn cetak;
         private Button btnCetak;
+        private Button btnBack;
+        private GroupBox groupBox1;
     }
 }
