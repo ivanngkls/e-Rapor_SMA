@@ -130,7 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cornsilk;
+            BackColor = Color.Azure;
             ClientSize = new Size(487, 371);
             Controls.Add(groupBox1);
             Controls.Add(btnLogout);
@@ -139,6 +139,7 @@
             Controls.Add(inputNilai);
             Controls.Add(dataGridView1);
             Name = "DashboardGuru";
+            Text = "Dashboard";
             Load += DashboardGuru_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);

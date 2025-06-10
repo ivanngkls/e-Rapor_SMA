@@ -43,6 +43,7 @@
             btnSimpan = new Button();
             btnBatal = new Button();
             groupBox2 = new GroupBox();
+            btnBack = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnBack);
             groupBox2.Controls.Add(btnSimpan);
             groupBox2.Controls.Add(btnBatal);
             groupBox2.Location = new Point(34, 267);
@@ -190,11 +192,20 @@
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(362, 22);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(75, 28);
+            btnBack.TabIndex = 14;
+            btnBack.Text = "Kembali";
+            btnBack.UseVisualStyleBackColor = true;
+            // 
             // InputNilai
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cornsilk;
+            BackColor = Color.Azure;
             ClientSize = new Size(526, 357);
             Controls.Add(groupBox2);
             Controls.Add(label1);
@@ -226,5 +237,6 @@
         private ComboBox comboBoxSemester;
         private ComboBox comboBoxMapel;
         private GroupBox groupBox2;
+        private Button btnBack;
     }
 }

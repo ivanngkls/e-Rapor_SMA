@@ -50,7 +50,7 @@
             // 
             NIPLabel.AutoSize = true;
             NIPLabel.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NIPLabel.Location = new Point(72, 100);
+            NIPLabel.Location = new Point(74, 100);
             NIPLabel.Name = "NIPLabel";
             NIPLabel.Size = new Size(28, 13);
             NIPLabel.TabIndex = 1;
@@ -102,7 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Cornsilk;
+            BackColor = Color.Azure;
             ClientSize = new Size(440, 298);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
