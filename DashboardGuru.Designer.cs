@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dgvSiswa = new DataGridView();
+            dataNilaiSiswa = new DataGridView();
             nis = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
             nilai = new DataGridViewTextBoxColumn();
@@ -39,7 +39,7 @@
             btnLogout = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)dgvSiswa).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
             SuspendLayout();
             // 
             // dataNilaiSiswa
@@ -55,17 +55,17 @@
             // 
             // dgvSiswa
             // 
-            dgvSiswa.BackgroundColor = Color.White;
-            dgvSiswa.BorderStyle = BorderStyle.Fixed3D;
-            dgvSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
-            dgvSiswa.Location = new Point(27, 162);
-            dgvSiswa.Margin = new Padding(4, 5, 4, 5);
-            dgvSiswa.Name = "dgvSiswa";
-            dgvSiswa.RowHeadersWidth = 62;
-            dgvSiswa.Size = new Size(614, 365);
-            dgvSiswa.TabIndex = 1;
-            dgvSiswa.CellClick += dgvSiswa_CellClick;
+            dataNilaiSiswa.BackgroundColor = Color.White;
+            dataNilaiSiswa.BorderStyle = BorderStyle.Fixed3D;
+            dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataNilaiSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
+            dataNilaiSiswa.Location = new Point(27, 162);
+            dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
+            dataNilaiSiswa.Name = "dgvSiswa";
+            dataNilaiSiswa.RowHeadersWidth = 62;
+            dataNilaiSiswa.Size = new Size(614, 365);
+            dataNilaiSiswa.TabIndex = 1;
+            dataNilaiSiswa.CellClick += dgvSiswa_CellClick;
             // 
             // nis
             // 

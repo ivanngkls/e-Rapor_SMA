@@ -63,10 +63,10 @@ namespace E_Raport_SMA
         {
             if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvSiswa.Rows[e.RowIndex];
-                selectedNIS = row.Cells["nis"].Value.ToString();
-                selectedNama = row.Cells["nama"].Value.ToString();
-                selectedNilai = Convert.ToDouble(row.Cells["nilai_angka"].Value);
+                //DataGridViewRow row = dgvSiswa.Rows[e.RowIndex];
+                //selectedNIS = row.Cells["nis"].Value.ToString();
+                //selectedNama = row.Cells["nama"].Value.ToString();
+                //selectedNilai = Convert.ToDouble(row.Cells["nilai_angka"].Value);
             }
         }
 

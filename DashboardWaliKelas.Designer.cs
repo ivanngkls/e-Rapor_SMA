@@ -62,14 +62,14 @@
             // 
 
             dataSiswa.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
-            dataGridView1.Location = new Point(30, 147);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(781, 318);
-            dataGridView1.TabIndex = 1;
+            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
+            dataSiswa.Location = new Point(30, 147);
+            dataSiswa.Margin = new Padding(4, 5, 4, 5);
+            dataSiswa.Name = "dataSiswa";
+            dataSiswa.RowHeadersWidth = 62;
+            dataSiswa.Size = new Size(781, 318);
+            dataSiswa.TabIndex = 1;
             // 
             // nis
             // 
@@ -119,8 +119,8 @@
             groupBox1.Padding = new Padding(4, 5, 4, 5);
             groupBox1.Size = new Size(821, 478);
             groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Enter += groupBox1_Enter;
+            //groupBox1.TabStop = false;
+            //groupBox1.Enter += groupBox1_Enter;
             // 
             // cariTxt
             // 
