@@ -158,7 +158,7 @@
             Controls.Add(dataNilaiSiswa);
             Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardGuru";
-            Text = "Dashboard";
+            Text = "Dashboard Guru";
             ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

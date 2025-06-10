@@ -63,7 +63,7 @@ namespace E_Raport_SMA
 
         private void kelasButton_Click(object sender, EventArgs e)
         {
-            DashboardWaliKelas dashboardWaliKelas = new DashboardWaliKelas();
+            DashboardWaliKelas dashboardWaliKelas = new DashboardWaliKelas(this.nip);
             this.Hide();
             dashboardWaliKelas.Show();
         }

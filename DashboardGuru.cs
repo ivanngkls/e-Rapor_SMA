@@ -36,7 +36,7 @@ namespace E_Raport_SMA
                     //executScalar -> untuk ambil satu baris saja
                     int idGuru = Convert.ToInt32(IdGuruCmd.ExecuteScalar());
 
-                    string query = @"SELECT siswa.nis, siswa.nama, nilai.nilai_angka 
+                    string query = @"SELECT siswa.nis, siswa.nama, nilai.nilai_angka  as nilai
                                     FROM siswa 
                                     JOIN raport ON siswa.id = raport.id_siswa 
                                     JOIN nilai ON raport.id = nilai.id_raport 
@@ -66,7 +66,7 @@ namespace E_Raport_SMA
                 DataGridViewRow row = dataNilaiSiswa.Rows[e.RowIndex];
                 selectedNIS = row.Cells["nis"].Value.ToString();
                 selectedNama = row.Cells["nama"].Value.ToString();
-                selectedNilai = Convert.ToDouble(row.Cells["nilai_angka"].Value);
+                selectedNilai = Convert.ToDouble(row.Cells["nilai"].Value);
             }
         }
 

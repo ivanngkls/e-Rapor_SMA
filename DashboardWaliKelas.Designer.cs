@@ -33,17 +33,12 @@
             addSiswa = new Button();
             updateSiswa = new Button();
             label1 = new Label();
-            dataSiswa = new DataGridView();
-            nilaisiswa = new DataGridViewTextBoxColumn();
-            jenis_kelamin = new DataGridViewTextBoxColumn();
-            alamat = new DataGridViewTextBoxColumn();
-            nama = new DataGridViewTextBoxColumn();
-            nis = new DataGridViewTextBoxColumn();
             btnCariSiswa = new Button();
             cariTxt = new TextBox();
             groupBox1 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
+            dataSiswa = new DataGridView();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             SuspendLayout();
             // 
             // btnBack2
@@ -97,53 +92,6 @@
             label1.TabIndex = 0;
             label1.Text = "Data Siswa";
             // 
-            // dataSiswa
-            // 
-            dataSiswa.BackgroundColor = Color.White;
-            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
-            dataSiswa.Location = new Point(16, 118);
-            dataSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataSiswa.Name = "dataSiswa";
-            dataSiswa.RowHeadersWidth = 62;
-            dataSiswa.Size = new Size(814, 318);
-            dataSiswa.TabIndex = 1;
-            // 
-            // nilaisiswa
-            // 
-            nilaisiswa.HeaderText = "Nilai Siswa";
-            nilaisiswa.MinimumWidth = 8;
-            nilaisiswa.Name = "nilaisiswa";
-            nilaisiswa.Width = 150;
-            // 
-            // jenis_kelamin
-            // 
-            jenis_kelamin.HeaderText = "Jenis Kelamin";
-            jenis_kelamin.MinimumWidth = 8;
-            jenis_kelamin.Name = "jenis_kelamin";
-            jenis_kelamin.Width = 150;
-            // 
-            // alamat
-            // 
-            alamat.HeaderText = "Alamat";
-            alamat.MinimumWidth = 8;
-            alamat.Name = "alamat";
-            alamat.Width = 150;
-            // 
-            // nama
-            // 
-            nama.HeaderText = "Nama Siswa";
-            nama.MinimumWidth = 8;
-            nama.Name = "nama";
-            nama.Width = 150;
-            // 
-            // nis
-            // 
-            nis.HeaderText = "NIS";
-            nis.MinimumWidth = 8;
-            nis.Name = "nis";
-            nis.Width = 150;
-            // 
             // btnCariSiswa
             // 
             btnCariSiswa.Location = new Point(16, 58);
@@ -165,9 +113,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(dataSiswa);
             groupBox1.Controls.Add(cariTxt);
             groupBox1.Controls.Add(btnCariSiswa);
-            groupBox1.Controls.Add(dataSiswa);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(68, 51);
             groupBox1.Margin = new Padding(4, 5, 4, 5);
@@ -176,6 +124,17 @@
             groupBox1.Size = new Size(838, 478);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
+            // 
+            // dataSiswa
+            // 
+            dataSiswa.BackgroundColor = Color.White;
+            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataSiswa.Location = new Point(16, 129);
+            dataSiswa.Margin = new Padding(4, 5, 4, 5);
+            dataSiswa.Name = "dataSiswa";
+            dataSiswa.RowHeadersWidth = 62;
+            dataSiswa.Size = new Size(814, 318);
+            dataSiswa.TabIndex = 4;
             // 
             // DashboardWaliKelas
             // 
@@ -191,9 +150,9 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardWaliKelas";
             Text = "Dashboard Wali Kelas";
-            ((System.ComponentModel.ISupportInitialize)dataSiswa).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataSiswa).EndInit();
             ResumeLayout(false);
         }
 
@@ -204,14 +163,11 @@
         private Button addSiswa;
         private Button updateSiswa;
         private Label label1;
-        private DataGridView dataSiswa;
-        private DataGridViewTextBoxColumn nis;
-        private DataGridViewTextBoxColumn nama;
-        private DataGridViewTextBoxColumn alamat;
-        private DataGridViewTextBoxColumn jenis_kelamin;
-        private DataGridViewTextBoxColumn nilaisiswa;
         private Button btnCariSiswa;
         private TextBox cariTxt;
         private GroupBox groupBox1;
+        private DataGridViewTextBoxColumn nis;
+        private DataGridViewTextBoxColumn nama;
+        private DataGridView dataSiswa;
     }
 }
