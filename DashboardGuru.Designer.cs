@@ -130,7 +130,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = Color.Cornsilk;
             ClientSize = new Size(487, 371);
             Controls.Add(groupBox1);
             Controls.Add(btnLogout);

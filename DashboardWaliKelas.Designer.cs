@@ -36,10 +36,10 @@
             jenis_kelamin = new DataGridViewTextBoxColumn();
             nilaisiswa = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
-            btnCariSiswa = new Button();
             cariTxt = new TextBox();
+            btnCariSiswa = new Button();
             btnLogout2 = new Button();
-            button1 = new Button();
+            btnCetakRapor = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -102,6 +102,14 @@
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // cariTxt
+            // 
+            cariTxt.Location = new Point(72, 62);
+            cariTxt.Name = "cariTxt";
+            cariTxt.PlaceholderText = "Cari Nama Siswa";
+            cariTxt.Size = new Size(485, 23);
+            cariTxt.TabIndex = 3;
+            // 
             // btnCariSiswa
             // 
             btnCariSiswa.Location = new Point(16, 62);
@@ -110,14 +118,6 @@
             btnCariSiswa.TabIndex = 2;
             btnCariSiswa.Text = "Cari";
             btnCariSiswa.UseVisualStyleBackColor = true;
-            // 
-            // cariTxt
-            // 
-            cariTxt.Location = new Point(72, 62);
-            cariTxt.Name = "cariTxt";
-            cariTxt.PlaceholderText = "Cari Nama Siswa";
-            cariTxt.Size = new Size(485, 23);
-            cariTxt.TabIndex = 3;
             // 
             // btnLogout2
             // 
@@ -128,21 +128,22 @@
             btnLogout2.Text = "Logout";
             btnLogout2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCetakRapor
             // 
-            button1.Location = new Point(411, 324);
-            button1.Name = "button1";
-            button1.Size = new Size(72, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = true;
+            btnCetakRapor.Location = new Point(385, 324);
+            btnCetakRapor.Name = "btnCetakRapor";
+            btnCetakRapor.Size = new Size(98, 23);
+            btnCetakRapor.TabIndex = 4;
+            btnCetakRapor.Text = "Cetak Rapor";
+            btnCetakRapor.UseVisualStyleBackColor = true;
             // 
             // DashboardWaliKelas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Cornsilk;
             ClientSize = new Size(583, 354);
-            Controls.Add(button1);
+            Controls.Add(btnCetakRapor);
             Controls.Add(btnLogout2);
             Controls.Add(groupBox1);
             Name = "DashboardWaliKelas";
@@ -166,7 +167,7 @@
         private GroupBox groupBox1;
         private TextBox cariTxt;
         private Button btnLogout2;
-        private Button button1;
+        private Button btnCetakRapor;
         private TextBox textBox1;
         private Button btnCariSiswa;
     }
