@@ -25,5 +25,10 @@ namespace E_Raport_SMA
             inputNis.Text = nis;
             inpNilai.Text = nilai.ToString();
         }
+
+        private void InputNilai_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

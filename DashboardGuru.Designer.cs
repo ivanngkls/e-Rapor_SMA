@@ -36,10 +36,13 @@
             inputNilai = new Button();
             txtCari = new TextBox();
             btnCari = new Button();
+            btnLogout = new Button();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dgvSiswa).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataNilaiSiswa
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -111,7 +114,7 @@
             // 
             // btnCari
             // 
-            btnCari.Location = new Point(31, 113);
+            btnCari.Location = new Point(168, 109);
             btnCari.Margin = new Padding(4, 5, 4, 5);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(73, 38);
@@ -119,34 +122,71 @@
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = true;
             // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.Location = new Point(658, 533);
+            btnLogout.Margin = new Padding(4, 5, 4, 5);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(120, 42);
+            btnLogout.TabIndex = 5;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(182, 9);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(261, 45);
+            label1.TabIndex = 0;
+            label1.Text = "Data Nilai Siswa";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(168, 24);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(620, 75);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            // 
             // DashboardGuru
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(696, 618);
+            BackColor = Color.Azure;
+            ClientSize = new Size(976, 628);
+            Controls.Add(groupBox1);
+            Controls.Add(btnLogout);
             Controls.Add(btnCari);
             Controls.Add(txtCari);
             Controls.Add(inputNilai);
-            Controls.Add(dgvSiswa);
-            Controls.Add(label1);
+            Controls.Add(dataNilaiSiswa);
             Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardGuru";
             Text = "Dashboard";
-            ((System.ComponentModel.ISupportInitialize)dgvSiswa).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private DataGridView dgvSiswa;
-        private Button inputNilai;
-        private TextBox txtCari;
-        private Button btnCari;
+        private DataGridView dataNilaiSiswa;
         private DataGridViewTextBoxColumn nis;
         private DataGridViewTextBoxColumn nama;
         private DataGridViewTextBoxColumn nilai;
+        private Button inputNilai;
+        private TextBox txtCari;
+        private Button btnCari;
+        private Button btnLogout;
+        private Label label1;
+        private GroupBox groupBox1;
     }
 }

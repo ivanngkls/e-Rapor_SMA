@@ -43,6 +43,7 @@
             btnSimpan = new Button();
             btnBatal = new Button();
             groupBox2 = new GroupBox();
+            btnBack = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -73,6 +74,7 @@
             // comboBoxSemester
             // 
             comboBoxSemester.FormattingEnabled = true;
+
             comboBoxSemester.Location = new Point(193, 192);
             comboBoxSemester.Margin = new Padding(4, 5, 4, 5);
             comboBoxSemester.Name = "comboBoxSemester";
@@ -82,6 +84,7 @@
             // comboBoxMapel
             // 
             comboBoxMapel.FormattingEnabled = true;
+
             comboBoxMapel.Location = new Point(193, 140);
             comboBoxMapel.Margin = new Padding(4, 5, 4, 5);
             comboBoxMapel.Name = "comboBoxMapel";
@@ -90,14 +93,16 @@
             // 
             // inpNilai
             // 
+
             inpNilai.Location = new Point(193, 243);
             inpNilai.Margin = new Padding(4, 5, 4, 5);
             inpNilai.Name = "inpNilai";
             inpNilai.Size = new Size(251, 33);
+
             inpNilai.TabIndex = 9;
             // 
             // inputNama
-            // 
+            //
             inputNama.Location = new Point(193, 88);
             inputNama.Margin = new Padding(4, 5, 4, 5);
             inputNama.Name = "inputNama";
@@ -106,10 +111,12 @@
             // 
             // inputNis
             // 
+
             inputNis.Location = new Point(193, 37);
             inputNis.Margin = new Padding(4, 5, 4, 5);
             inputNis.Name = "inputNis";
             inputNis.Size = new Size(251, 33);
+
             inputNis.TabIndex = 5;
             // 
             // label6
@@ -125,16 +132,19 @@
             // label5
             // 
             label5.AutoSize = true;
+
             label5.Location = new Point(20, 205);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(97, 28);
+
             label5.TabIndex = 3;
             label5.Text = "Semester";
             // 
             // label4
             // 
             label4.AutoSize = true;
+
             label4.Location = new Point(20, 153);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
@@ -145,16 +155,19 @@
             // label3
             // 
             label3.AutoSize = true;
+
             label3.Location = new Point(20, 102);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(121, 28);
             label3.TabIndex = 1;
             label3.Text = "Nama Siswa";
+
             // 
             // label2
             // 
             label2.AutoSize = true;
+
             label2.Location = new Point(23, 50);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
@@ -165,6 +178,7 @@
             // label1
             // 
             label1.AutoSize = true;
+
             label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(241, 43);
             label1.Margin = new Padding(4, 0, 4, 0);
@@ -195,6 +209,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(btnBack);
             groupBox2.Controls.Add(btnSimpan);
             groupBox2.Controls.Add(btnBatal);
             groupBox2.Location = new Point(49, 445);
@@ -205,17 +220,30 @@
             groupBox2.TabIndex = 14;
             groupBox2.TabStop = false;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(362, 22);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(75, 28);
+            btnBack.TabIndex = 14;
+            btnBack.Text = "Kembali";
+            btnBack.UseVisualStyleBackColor = true;
+            // 
             // InputNilai
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+
+            BackColor = Color.Azure;
             ClientSize = new Size(751, 595);
+
             Controls.Add(groupBox2);
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "InputNilai";
             Text = "InputNilai";
+            Load += InputNilai_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -240,5 +268,6 @@
         private ComboBox comboBoxSemester;
         private ComboBox comboBoxMapel;
         private GroupBox groupBox2;
+        private Button btnBack;
     }
 }
