@@ -51,5 +51,10 @@ namespace E_Raport_SMA
                 }
             }
         }
+
+        private void inputNilaiButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

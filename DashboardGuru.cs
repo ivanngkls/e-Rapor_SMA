@@ -17,11 +17,6 @@ namespace E_Raport_SMA
             InitializeComponent();
         }
 
-        private void DashboardGuru_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

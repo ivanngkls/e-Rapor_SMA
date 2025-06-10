@@ -31,41 +31,54 @@
             welcomeLabel = new Label();
             inputNilaiButton = new Button();
             kelasButton = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // welcomeLabel
             // 
             welcomeLabel.AutoSize = true;
-            welcomeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            welcomeLabel.Location = new Point(311, 82);
+            welcomeLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            welcomeLabel.Location = new Point(305, 73);
             welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(183, 32);
+            welcomeLabel.Size = new Size(417, 70);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
             // 
             // inputNilaiButton
             // 
-            inputNilaiButton.Location = new Point(343, 155);
+            inputNilaiButton.Location = new Point(331, 239);
             inputNilaiButton.Name = "inputNilaiButton";
-            inputNilaiButton.Size = new Size(112, 34);
+            inputNilaiButton.Size = new Size(324, 50);
             inputNilaiButton.TabIndex = 1;
             inputNilaiButton.Text = "Input Nilai";
             inputNilaiButton.UseVisualStyleBackColor = true;
+            inputNilaiButton.Click += inputNilaiButton_Click;
             // 
             // kelasButton
             // 
-            kelasButton.Location = new Point(343, 205);
+            kelasButton.Location = new Point(331, 324);
             kelasButton.Name = "kelasButton";
-            kelasButton.Size = new Size(112, 34);
+            kelasButton.Size = new Size(324, 50);
             kelasButton.TabIndex = 2;
             kelasButton.Text = "Lihat Kelas";
             kelasButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(331, 410);
+            button1.Name = "button1";
+            button1.Size = new Size(324, 50);
+            button1.TabIndex = 3;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Azure;
+            ClientSize = new Size(976, 628);
+            Controls.Add(button1);
             Controls.Add(kelasButton);
             Controls.Add(inputNilaiButton);
             Controls.Add(welcomeLabel);
@@ -80,5 +93,6 @@
         private Label welcomeLabel;
         private Button inputNilaiButton;
         private Button kelasButton;
+        private Button button1;
     }
 }

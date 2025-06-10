@@ -50,9 +50,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(236, 0);
+            label1.Location = new Point(337, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(119, 30);
+            label1.Size = new Size(183, 45);
             label1.TabIndex = 0;
             label1.Text = "Data Siswa";
             // 
@@ -61,36 +62,48 @@
             dataSiswa.BackgroundColor = Color.White;
             dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
-            dataSiswa.Location = new Point(16, 68);
+            dataSiswa.Location = new Point(23, 113);
+            dataSiswa.Margin = new Padding(4, 5, 4, 5);
             dataSiswa.Name = "dataSiswa";
-            dataSiswa.Size = new Size(547, 194);
+            dataSiswa.RowHeadersWidth = 62;
+            dataSiswa.Size = new Size(781, 323);
             dataSiswa.TabIndex = 1;
             dataSiswa.CellContentClick += dataGridView1_CellContentClick;
             // 
             // nis
             // 
             nis.HeaderText = "NIS";
+            nis.MinimumWidth = 8;
             nis.Name = "nis";
+            nis.Width = 150;
             // 
             // nama
             // 
             nama.HeaderText = "Nama Siswa";
+            nama.MinimumWidth = 8;
             nama.Name = "nama";
+            nama.Width = 150;
             // 
             // alamat
             // 
             alamat.HeaderText = "Alamat";
+            alamat.MinimumWidth = 8;
             alamat.Name = "alamat";
+            alamat.Width = 150;
             // 
             // jenis_kelamin
             // 
             jenis_kelamin.HeaderText = "Jenis Kelamin";
+            jenis_kelamin.MinimumWidth = 8;
             jenis_kelamin.Name = "jenis_kelamin";
+            jenis_kelamin.Width = 150;
             // 
             // nilaisiswa
             // 
             nilaisiswa.HeaderText = "Nilai Siswa";
+            nilaisiswa.MinimumWidth = 8;
             nilaisiswa.Name = "nilaisiswa";
+            nilaisiswa.Width = 150;
             // 
             // groupBox1
             // 
@@ -98,82 +111,88 @@
             groupBox1.Controls.Add(btnCariSiswa);
             groupBox1.Controls.Add(dataSiswa);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(1, 31);
+            groupBox1.Location = new Point(1, 52);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(575, 287);
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(821, 478);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
             // 
             // cariTxt
             // 
-            cariTxt.Location = new Point(75, 39);
+            cariTxt.Location = new Point(107, 65);
+            cariTxt.Margin = new Padding(4, 5, 4, 5);
             cariTxt.Name = "cariTxt";
             cariTxt.PlaceholderText = "Cari Nama Siswa";
-            cariTxt.Size = new Size(485, 23);
+            cariTxt.Size = new Size(691, 31);
             cariTxt.TabIndex = 3;
-            cariTxt.TextChanged += this.cariTxt_TextChanged;
             // 
             // btnCariSiswa
             // 
-            btnCariSiswa.Location = new Point(19, 39);
+            btnCariSiswa.Location = new Point(27, 65);
+            btnCariSiswa.Margin = new Padding(4, 5, 4, 5);
             btnCariSiswa.Name = "btnCariSiswa";
-            btnCariSiswa.Size = new Size(50, 23);
+            btnCariSiswa.Size = new Size(71, 38);
             btnCariSiswa.TabIndex = 2;
             btnCariSiswa.Text = "Cari";
             btnCariSiswa.UseVisualStyleBackColor = true;
-            btnCariSiswa.Click += btnCariSiswa_Click;
             // 
             // btnBack2
             // 
-            btnBack2.Location = new Point(489, 324);
+            btnBack2.Location = new Point(699, 540);
+            btnBack2.Margin = new Padding(4, 5, 4, 5);
             btnBack2.Name = "btnBack2";
-            btnBack2.Size = new Size(72, 23);
+            btnBack2.Size = new Size(103, 38);
             btnBack2.TabIndex = 3;
             btnBack2.Text = "Kembali";
             btnBack2.UseVisualStyleBackColor = true;
             // 
             // btnLihatRapor
             // 
-            btnLihatRapor.Location = new Point(385, 324);
+            btnLihatRapor.Location = new Point(550, 540);
+            btnLihatRapor.Margin = new Padding(4, 5, 4, 5);
             btnLihatRapor.Name = "btnLihatRapor";
-            btnLihatRapor.Size = new Size(98, 23);
+            btnLihatRapor.Size = new Size(140, 38);
             btnLihatRapor.TabIndex = 4;
             btnLihatRapor.Text = "Lihat Rapor";
             btnLihatRapor.UseVisualStyleBackColor = true;
             // 
             // addSiswa
             // 
-            addSiswa.Location = new Point(17, 324);
+            addSiswa.Location = new Point(24, 540);
+            addSiswa.Margin = new Padding(4, 5, 4, 5);
             addSiswa.Name = "addSiswa";
-            addSiswa.Size = new Size(98, 23);
+            addSiswa.Size = new Size(140, 38);
             addSiswa.TabIndex = 5;
             addSiswa.Text = "Tambah Siswa";
             addSiswa.UseVisualStyleBackColor = true;
             // 
             // updateSiswa
             // 
-            updateSiswa.Location = new Point(121, 324);
+            updateSiswa.Location = new Point(173, 540);
+            updateSiswa.Margin = new Padding(4, 5, 4, 5);
             updateSiswa.Name = "updateSiswa";
-            updateSiswa.Size = new Size(98, 23);
+            updateSiswa.Size = new Size(140, 38);
             updateSiswa.TabIndex = 6;
             updateSiswa.Text = "Update Siswa";
             updateSiswa.UseVisualStyleBackColor = true;
             // 
             // DashboardWaliKelas
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
-            ClientSize = new Size(583, 354);
+            ClientSize = new Size(833, 590);
             Controls.Add(updateSiswa);
             Controls.Add(addSiswa);
             Controls.Add(btnLihatRapor);
             Controls.Add(btnBack2);
             Controls.Add(groupBox1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardWaliKelas";
             Text = "Dashboard Wali Kelas";
-            Load += DashboardWaliKelas_Load;
             ((System.ComponentModel.ISupportInitialize)dataSiswa).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
