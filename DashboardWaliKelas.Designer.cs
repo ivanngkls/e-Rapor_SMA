@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dataSiswa = new DataGridView();
             nis = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
             alamat = new DataGridViewTextBoxColumn();
@@ -42,7 +42,7 @@
             btnLihatRapor = new Button();
             addSiswa = new Button();
             updateSiswa = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,15 +56,16 @@
             label1.TabIndex = 0;
             label1.Text = "Data Siswa";
             // 
-            // dataGridView1
+            // dataSiswa
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
-            dataGridView1.Location = new Point(16, 68);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(547, 194);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataSiswa.BackgroundColor = Color.White;
+            dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, alamat, jenis_kelamin, nilaisiswa });
+            dataSiswa.Location = new Point(16, 68);
+            dataSiswa.Name = "dataSiswa";
+            dataSiswa.Size = new Size(547, 194);
+            dataSiswa.TabIndex = 1;
+            dataSiswa.CellContentClick += dataGridView1_CellContentClick;
             // 
             // nis
             // 
@@ -95,7 +96,7 @@
             // 
             groupBox1.Controls.Add(cariTxt);
             groupBox1.Controls.Add(btnCariSiswa);
-            groupBox1.Controls.Add(dataGridView1);
+            groupBox1.Controls.Add(dataSiswa);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(1, 31);
             groupBox1.Name = "groupBox1";
@@ -173,7 +174,7 @@
             Name = "DashboardWaliKelas";
             Text = "Dashboard Wali Kelas";
             Load += DashboardWaliKelas_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataSiswa).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -182,7 +183,7 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dataSiswa;
         private GroupBox groupBox1;
         private TextBox cariTxt;
         private Button btnBack2;

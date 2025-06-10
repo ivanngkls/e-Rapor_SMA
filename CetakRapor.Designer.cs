@@ -31,7 +31,7 @@
             label1 = new Label();
             semester = new ComboBox();
             label2 = new Label();
-            dataGridView1 = new DataGridView();
+            raporSiswa = new DataGridView();
             btnCetak = new Button();
             btnBack = new Button();
             groupBox1 = new GroupBox();
@@ -41,7 +41,7 @@
             mapel = new DataGridViewTextBoxColumn();
             nilai = new DataGridViewTextBoxColumn();
             predikat = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)raporSiswa).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,15 +73,16 @@
             label2.TabIndex = 2;
             label2.Text = "Semester";
             // 
-            // dataGridView1
+            // raporSiswa
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, mapel, nilai, predikat });
-            dataGridView1.Location = new Point(20, 92);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(646, 233);
-            dataGridView1.TabIndex = 3;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            raporSiswa.BackgroundColor = Color.White;
+            raporSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            raporSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, mapel, nilai, predikat });
+            raporSiswa.Location = new Point(20, 92);
+            raporSiswa.Name = "raporSiswa";
+            raporSiswa.Size = new Size(646, 233);
+            raporSiswa.TabIndex = 3;
+            raporSiswa.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnCetak
             // 
@@ -151,10 +152,10 @@
             Controls.Add(groupBox1);
             Controls.Add(btnBack);
             Controls.Add(btnCetak);
-            Controls.Add(dataGridView1);
+            Controls.Add(raporSiswa);
             Name = "CetakRapor";
             Text = "CetakRapor";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)raporSiswa).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -165,7 +166,7 @@
         private Label label1;
         private ComboBox semester;
         private Label label2;
-        private DataGridView dataGridView1;
+        private DataGridView raporSiswa;
         private Button btnCetak;
         private Button btnBack;
         private GroupBox groupBox1;
