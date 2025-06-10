@@ -37,6 +37,9 @@
             cariTxt = new TextBox();
             groupBox1 = new GroupBox();
             dataSiswa = new DataGridView();
+            prevBtn = new Button();
+            nextBtn = new Button();
+            pageInfoLabel = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             SuspendLayout();
@@ -113,6 +116,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(pageInfoLabel);
+            groupBox1.Controls.Add(nextBtn);
+            groupBox1.Controls.Add(prevBtn);
             groupBox1.Controls.Add(dataSiswa);
             groupBox1.Controls.Add(cariTxt);
             groupBox1.Controls.Add(btnCariSiswa);
@@ -133,8 +139,37 @@
             dataSiswa.Margin = new Padding(4, 5, 4, 5);
             dataSiswa.Name = "dataSiswa";
             dataSiswa.RowHeadersWidth = 62;
-            dataSiswa.Size = new Size(814, 318);
+            dataSiswa.Size = new Size(814, 287);
             dataSiswa.TabIndex = 4;
+            // 
+            // prevBtn
+            // 
+            prevBtn.Location = new Point(16, 426);
+            prevBtn.Margin = new Padding(4, 5, 4, 5);
+            prevBtn.Name = "prevBtn";
+            prevBtn.Size = new Size(89, 38);
+            prevBtn.TabIndex = 7;
+            prevBtn.Text = "< Prev";
+            prevBtn.UseVisualStyleBackColor = true;
+            // 
+            // nextBtn
+            // 
+            nextBtn.Location = new Point(113, 426);
+            nextBtn.Margin = new Padding(4, 5, 4, 5);
+            nextBtn.Name = "nextBtn";
+            nextBtn.Size = new Size(89, 38);
+            nextBtn.TabIndex = 8;
+            nextBtn.Text = "Next >";
+            nextBtn.UseVisualStyleBackColor = true;
+            // 
+            // pageInfoLabel
+            // 
+            pageInfoLabel.AutoSize = true;
+            pageInfoLabel.Location = new Point(698, 433);
+            pageInfoLabel.Name = "pageInfoLabel";
+            pageInfoLabel.Size = new Size(132, 25);
+            pageInfoLabel.TabIndex = 9;
+            pageInfoLabel.Text = "Halaman 1 dari";
             // 
             // DashboardWaliKelas
             // 
@@ -169,5 +204,8 @@
         private DataGridViewTextBoxColumn nis;
         private DataGridViewTextBoxColumn nama;
         private DataGridView dataSiswa;
+        private Button nextBtn;
+        private Button prevBtn;
+        private Label pageInfoLabel;
     }
 }
