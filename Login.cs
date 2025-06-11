@@ -13,8 +13,8 @@ namespace E_Raport_SMA
         {
             string nip = txtNIP.Text.Trim();
             string password = txtPassword.Text.Trim();
-               
-            if(string.IsNullOrEmpty(nip) || string.IsNullOrEmpty(password))
+
+            if (string.IsNullOrEmpty(nip) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("NIP dan Password harus diisi.", "Validasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -23,10 +23,11 @@ namespace E_Raport_SMA
 
             using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
             {
-                try { 
+                try
+                {
                     conn.Open();
                     string query = "SELECT password FROM guru WHERE nip = @nip";
-                    MySqlCommand cmd  = new MySqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nip", nip);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -48,10 +49,21 @@ namespace E_Raport_SMA
                         }
                     }
                 }
-                catch {
+                catch
+                {
                     MessageBox.Show("Terjadi kesalahan koneksi", "Koneksi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
