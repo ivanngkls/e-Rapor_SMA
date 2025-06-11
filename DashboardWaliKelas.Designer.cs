@@ -112,7 +112,6 @@
             cariTxt.PlaceholderText = "Cari Nama Siswa";
             cariTxt.Size = new Size(485, 23);
             cariTxt.TabIndex = 3;
-            cariTxt.TextChanged += this.cariTxt_TextChanged;
             // 
             // btnCariSiswa
             // 
