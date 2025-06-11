@@ -32,12 +32,12 @@
             inputNilaiButton = new Button();
             kelasButton = new Button();
             button1 = new Button();
+            kelasPanel = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // welcomeLabel
             // 
             welcomeLabel.AutoSize = true;
-
             welcomeLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
             welcomeLabel.Location = new Point(305, 73);
             welcomeLabel.Name = "welcomeLabel";
@@ -74,6 +74,14 @@
             button1.TabIndex = 3;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // kelasPanel
+            // 
+            kelasPanel.Location = new Point(664, 239);
+            kelasPanel.Name = "kelasPanel";
+            kelasPanel.Size = new Size(300, 341);
+            kelasPanel.TabIndex = 4;
             // 
             // Home
             // 
@@ -81,6 +89,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Azure;
             ClientSize = new Size(976, 628);
+            Controls.Add(kelasPanel);
             Controls.Add(button1);
             Controls.Add(kelasButton);
             Controls.Add(inputNilaiButton);
@@ -97,5 +106,6 @@
         private Button inputNilaiButton;
         private Button kelasButton;
         private Button button1;
+        private FlowLayoutPanel kelasPanel;
     }
 }

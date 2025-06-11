@@ -30,13 +30,10 @@
         {
             label1 = new Label();
             dataNilaiSiswa = new DataGridView();
-            nis = new DataGridViewTextBoxColumn();
-            nama = new DataGridViewTextBoxColumn();
-            nilai = new DataGridViewTextBoxColumn();
             inputNilai = new Button();
             txtCari = new TextBox();
             btnCari = new Button();
-            btnLogout = new Button();
+            backBtn = new Button();
             groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
             groupBox1.SuspendLayout();
@@ -58,43 +55,18 @@
             dataNilaiSiswa.BackgroundColor = Color.White;
             dataNilaiSiswa.BorderStyle = BorderStyle.Fixed3D;
             dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataNilaiSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, nilai });
             dataNilaiSiswa.Location = new Point(99, 159);
             dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
             dataNilaiSiswa.Name = "dataNilaiSiswa";
             dataNilaiSiswa.RowHeadersWidth = 62;
             dataNilaiSiswa.Size = new Size(620, 365);
             dataNilaiSiswa.TabIndex = 1;
-            dataNilaiSiswa.CellClick += dgvSiswa_CellClick;
-            // 
-            // nis
-            // 
-            nis.DataPropertyName = "nis";
-            nis.HeaderText = "NIS";
-            nis.MinimumWidth = 8;
-            nis.Name = "nis";
-            nis.Width = 150;
-            // 
-            // nama
-            // 
-            nama.DataPropertyName = "nama";
-            nama.HeaderText = "Nama Siswa";
-            nama.MinimumWidth = 8;
-            nama.Name = "nama";
-            nama.Width = 150;
-            // 
-            // nilai
-            // 
-            nilai.DataPropertyName = "nilai";
-            nilai.HeaderText = "Nilai";
-            nilai.MinimumWidth = 8;
-            nilai.Name = "nilai";
-            nilai.Width = 150;
+            dataNilaiSiswa.CellClick += dataNilaiSiswa_CellClick;
             // 
             // inputNilai
             // 
             inputNilai.BackColor = Color.Transparent;
-            inputNilai.Location = new Point(452, 538);
+            inputNilai.Location = new Point(461, 534);
             inputNilai.Margin = new Padding(4, 5, 4, 5);
             inputNilai.Name = "inputNilai";
             inputNilai.Size = new Size(120, 42);
@@ -122,16 +94,17 @@
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = true;
             // 
-            // btnLogout
+            // backBtn
             // 
-            btnLogout.BackColor = Color.Transparent;
-            btnLogout.Location = new Point(589, 534);
-            btnLogout.Margin = new Padding(4, 5, 4, 5);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(120, 42);
-            btnLogout.TabIndex = 5;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = false;
+            backBtn.BackColor = Color.Transparent;
+            backBtn.Location = new Point(589, 534);
+            backBtn.Margin = new Padding(4, 5, 4, 5);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(120, 42);
+            backBtn.TabIndex = 5;
+            backBtn.Text = "Kembali";
+            backBtn.UseVisualStyleBackColor = false;
+            backBtn.Click += btnLogout_Click;
             // 
             // groupBox1
             // 
@@ -151,7 +124,7 @@
             BackColor = Color.Azure;
             ClientSize = new Size(833, 590);
             Controls.Add(groupBox1);
-            Controls.Add(btnLogout);
+            Controls.Add(backBtn);
             Controls.Add(btnCari);
             Controls.Add(txtCari);
             Controls.Add(inputNilai);
@@ -168,13 +141,10 @@
 
         #endregion
         private DataGridView dataNilaiSiswa;
-        private DataGridViewTextBoxColumn nis;
-        private DataGridViewTextBoxColumn nama;
-        private DataGridViewTextBoxColumn nilai;
         private Button inputNilai;
         private TextBox txtCari;
         private Button btnCari;
-        private Button btnLogout;
+        private Button backBtn;
         private Label label1;
         private GroupBox groupBox1;
     }

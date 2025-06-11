@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,22 +14,43 @@ namespace E_Raport_SMA
 {
     public partial class InputNilai : Form
     {
-        public InputNilai(string namaSiswa, string NIS, double nilai)
+        private string idNilai;
+        private string nipGuru;
+        private int idKelas;
+        public InputNilai(string namaSiswa, string NIS, double nilai, string mapel, string idNilai, string nip, int idKelas)
         {
             InitializeComponent();
-            loadData(namaSiswa, NIS, nilai);
+            this.idKelas = idKelas;
+            this.idNilai = idNilai;
+            this.nipGuru = nip;
+            loadData(namaSiswa, NIS, nilai, mapel);
         }
 
-        private void loadData(string nama, string nis, double nilai)
+        private void loadData(string nama, string nis, double nilai, string mapel)
         {
             inputNama.Text = nama;
             inputNis.Text = nis;
             inpNilai.Text = nilai.ToString();
+            inpMapel.Text = mapel.ToString();
+
         }
 
-        private void InputNilai_Load(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
-
+            using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
+            {
+                conn.Open();
+                string query = "UPDATE nilai SET nilai_angka = @nilai WHERE id=@id";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("id", this.idNilai);
+                cmd.Parameters.AddWithValue("nilai", inpNilai.Text);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                DashboardGuru dbGuru = new DashboardGuru(this.nipGuru, this.idKelas);
+                MessageBox.Show("Data berhasil di update", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                dbGuru.Show();
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace E_Raport_SMA
     {
         private string nip;
 
-        int pageSize = 10;
+        int pageSize = 5;
         int currentPage = 1;
         int totalPages = 1;
         int totalRecords = 0;
@@ -54,8 +54,11 @@ namespace E_Raport_SMA
                         return;
                     }
 
-                    string countQuery = "SELECT (*) FROM siswa WHERE id_walikelas = @id";
+                    int idWaliKelas = Convert.ToInt32(result);
+
+                    string countQuery = "SELECT COUNT(*) FROM siswa WHERE id_walikelas = @id";
                     MySqlCommand countCmd = new MySqlCommand(countQuery, conn);
+                    countCmd.Parameters.AddWithValue("@id", idWaliKelas);
                     totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
 
                     totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
@@ -64,10 +67,11 @@ namespace E_Raport_SMA
 
                     int offset = (currentPage - 1) * pageSize;
 
-                    int idWaliKelas = Convert.ToInt32(result);
-                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id DESC LIMIT @limit OFFSET @offset";
+
+                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@limit", pageSize);
+                    cmd.Parameters.AddWithValue("@id", idWaliKelas);
                     cmd.Parameters.AddWithValue("@offset", offset);
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -86,7 +90,7 @@ namespace E_Raport_SMA
 
         private void prevBtn_Click(object sender, EventArgs e)
         {
-            if (currentPage > totalPages)
+            if (currentPage > 1)
             {
                 currentPage--;
                 Load_DataSiswa();
@@ -95,11 +99,18 @@ namespace E_Raport_SMA
 
         private void nextBtn_Click(object sender, EventArgs e)
         {
-            if (currentPage < totalPages) 
+            if (currentPage < totalPages)
             {
                 currentPage++;
                 Load_DataSiswa();
             }
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            Home home = new Home(this.nip);
+            this.Hide();
+            home.Show();
         }
     }
 }

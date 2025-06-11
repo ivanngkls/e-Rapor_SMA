@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            comboBoxSemester = new ComboBox();
-            comboBoxMapel = new ComboBox();
+            inpMapel = new TextBox();
             inpNilai = new TextBox();
             inputNama = new TextBox();
             inputNis = new TextBox();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -50,13 +48,11 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBoxSemester);
-            groupBox1.Controls.Add(comboBoxMapel);
+            groupBox1.Controls.Add(inpMapel);
             groupBox1.Controls.Add(inpNilai);
             groupBox1.Controls.Add(inputNama);
             groupBox1.Controls.Add(inputNis);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label2);
@@ -71,27 +67,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Form Input Nilai";
             // 
-            // comboBoxSemester
+            // inpMapel
             // 
-            comboBoxSemester.FormattingEnabled = true;
-            comboBoxSemester.Location = new Point(193, 192);
-            comboBoxSemester.Margin = new Padding(4, 5, 4, 5);
-            comboBoxSemester.Name = "comboBoxSemester";
-            comboBoxSemester.Size = new Size(251, 36);
-            comboBoxSemester.TabIndex = 11;
-            // 
-            // comboBoxMapel
-            // 
-            comboBoxMapel.FormattingEnabled = true;
-            comboBoxMapel.Location = new Point(193, 140);
-            comboBoxMapel.Margin = new Padding(4, 5, 4, 5);
-            comboBoxMapel.Name = "comboBoxMapel";
-            comboBoxMapel.Size = new Size(251, 36);
-            comboBoxMapel.TabIndex = 10;
+            inpMapel.Location = new Point(190, 168);
+            inpMapel.Margin = new Padding(4, 5, 4, 5);
+            inpMapel.Name = "inpMapel";
+            inpMapel.ReadOnly = true;
+            inpMapel.Size = new Size(251, 33);
+            inpMapel.TabIndex = 12;
             // 
             // inpNilai
             // 
-            inpNilai.Location = new Point(193, 243);
+            inpNilai.Location = new Point(190, 223);
             inpNilai.Margin = new Padding(4, 5, 4, 5);
             inpNilai.Name = "inpNilai";
             inpNilai.Size = new Size(251, 33);
@@ -99,44 +86,36 @@
             // 
             // inputNama
             // 
-            inputNama.Location = new Point(193, 88);
+            inputNama.Location = new Point(192, 115);
             inputNama.Margin = new Padding(4, 5, 4, 5);
             inputNama.Name = "inputNama";
+            inputNama.ReadOnly = true;
             inputNama.Size = new Size(251, 33);
             inputNama.TabIndex = 6;
             // 
             // inputNis
             // 
-            inputNis.Location = new Point(193, 37);
+            inputNis.Location = new Point(192, 64);
             inputNis.Margin = new Padding(4, 5, 4, 5);
             inputNis.Name = "inputNis";
+            inputNis.ReadOnly = true;
             inputNis.Size = new Size(251, 33);
             inputNis.TabIndex = 5;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(23, 248);
+            label6.Location = new Point(22, 228);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(52, 28);
             label6.TabIndex = 4;
             label6.Text = "Nilai";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(20, 205);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(97, 28);
-            label5.TabIndex = 3;
-            label5.Text = "Semester";
-            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(20, 153);
+            label4.Location = new Point(19, 180);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(68, 28);
@@ -146,7 +125,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(20, 102);
+            label3.Location = new Point(19, 129);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(121, 28);
@@ -156,7 +135,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 50);
+            label2.Location = new Point(22, 77);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(44, 28);
@@ -183,6 +162,7 @@
             btnSimpan.TabIndex = 12;
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.Click += btnSimpan_Click;
             // 
             // btnBatal
             // 
@@ -228,7 +208,6 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "InputNilai";
             Text = "InputNilai";
-            Load += InputNilai_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -241,7 +220,6 @@
         private GroupBox groupBox1;
         private Label label1;
         private Label label6;
-        private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
@@ -250,9 +228,8 @@
         private TextBox inputNis;
         private Button btnBatal;
         private Button btnSimpan;
-        private ComboBox comboBoxSemester;
-        private ComboBox comboBoxMapel;
         private GroupBox groupBox2;
         private Button btnBack;
+        private TextBox inpMapel;
     }
 }

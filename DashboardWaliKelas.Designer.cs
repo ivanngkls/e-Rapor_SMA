@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnBack2 = new Button();
+            BackBtn = new Button();
             btnLihatRapor = new Button();
             addSiswa = new Button();
             updateSiswa = new Button();
@@ -44,15 +44,16 @@
             ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             SuspendLayout();
             // 
-            // btnBack2
+            // BackBtn
             // 
-            btnBack2.Location = new Point(795, 539);
-            btnBack2.Margin = new Padding(4, 5, 4, 5);
-            btnBack2.Name = "btnBack2";
-            btnBack2.Size = new Size(103, 38);
-            btnBack2.TabIndex = 3;
-            btnBack2.Text = "Kembali";
-            btnBack2.UseVisualStyleBackColor = true;
+            BackBtn.Location = new Point(795, 539);
+            BackBtn.Margin = new Padding(4, 5, 4, 5);
+            BackBtn.Name = "BackBtn";
+            BackBtn.Size = new Size(103, 38);
+            BackBtn.TabIndex = 3;
+            BackBtn.Text = "Kembali";
+            BackBtn.UseVisualStyleBackColor = true;
+            BackBtn.Click += BackBtn_Click;
             // 
             // btnLihatRapor
             // 
@@ -182,7 +183,7 @@
             Controls.Add(updateSiswa);
             Controls.Add(addSiswa);
             Controls.Add(btnLihatRapor);
-            Controls.Add(btnBack2);
+            Controls.Add(BackBtn);
             Controls.Add(groupBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardWaliKelas";
@@ -194,7 +195,7 @@
         }
 
         #endregion
-        private Button btnBack2;
+        private Button BackBtn;
         private Button btnLihatRapor;
         private TextBox textBox1;
         private Button addSiswa;
