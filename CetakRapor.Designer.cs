@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CetakRapor));
             label1 = new Label();
             semester = new ComboBox();
             label2 = new Label();
             raporSiswa = new DataGridView();
-            btnCetak = new Button();
-            btnBack = new Button();
-            groupBox1 = new GroupBox();
             nis = new DataGridViewTextBoxColumn();
             nama = new DataGridViewTextBoxColumn();
             kelas = new DataGridViewTextBoxColumn();
             mapel = new DataGridViewTextBoxColumn();
             nilai = new DataGridViewTextBoxColumn();
             predikat = new DataGridViewTextBoxColumn();
+            btnCetak = new Button();
+            btnBack = new Button();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)raporSiswa).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -80,27 +81,74 @@
             raporSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, mapel, nilai, predikat });
             raporSiswa.Location = new Point(20, 92);
             raporSiswa.Name = "raporSiswa";
+            raporSiswa.RowHeadersWidth = 62;
             raporSiswa.Size = new Size(646, 233);
             raporSiswa.TabIndex = 3;
             raporSiswa.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // nis
+            // 
+            nis.HeaderText = "NIS";
+            nis.MinimumWidth = 8;
+            nis.Name = "nis";
+            nis.Width = 150;
+            // 
+            // nama
+            // 
+            nama.HeaderText = "Nama Siswa";
+            nama.MinimumWidth = 8;
+            nama.Name = "nama";
+            nama.Width = 150;
+            // 
+            // kelas
+            // 
+            kelas.HeaderText = "Kelas";
+            kelas.MinimumWidth = 8;
+            kelas.Name = "kelas";
+            kelas.Width = 150;
+            // 
+            // mapel
+            // 
+            mapel.HeaderText = "Mata Pelajaran";
+            mapel.MinimumWidth = 8;
+            mapel.Name = "mapel";
+            mapel.Width = 150;
+            // 
+            // nilai
+            // 
+            nilai.HeaderText = "Nilai";
+            nilai.MinimumWidth = 8;
+            nilai.Name = "nilai";
+            nilai.Width = 150;
+            // 
+            // predikat
+            // 
+            predikat.HeaderText = "Predikat";
+            predikat.MinimumWidth = 8;
+            predikat.Name = "predikat";
+            predikat.Width = 150;
+            // 
             // btnCetak
             // 
+            btnCetak.BackColor = Color.LightSkyBlue;
+            btnCetak.FlatStyle = FlatStyle.Flat;
             btnCetak.Location = new Point(20, 331);
             btnCetak.Name = "btnCetak";
             btnCetak.Size = new Size(95, 23);
             btnCetak.TabIndex = 4;
             btnCetak.Text = "Cetak Rapor";
-            btnCetak.UseVisualStyleBackColor = true;
+            btnCetak.UseVisualStyleBackColor = false;
             // 
             // btnBack
             // 
+            btnBack.BackColor = Color.LightSlateGray;
+            btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Location = new Point(121, 331);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(95, 23);
             btnBack.TabIndex = 5;
             btnBack.Text = "Kembali";
-            btnBack.UseVisualStyleBackColor = true;
+            btnBack.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -113,46 +161,17 @@
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             // 
-            // nis
-            // 
-            nis.HeaderText = "NIS";
-            nis.Name = "nis";
-            // 
-            // nama
-            // 
-            nama.HeaderText = "Nama Siswa";
-            nama.Name = "nama";
-            // 
-            // kelas
-            // 
-            kelas.HeaderText = "Kelas";
-            kelas.Name = "kelas";
-            // 
-            // mapel
-            // 
-            mapel.HeaderText = "Mata Pelajaran";
-            mapel.Name = "mapel";
-            // 
-            // nilai
-            // 
-            nilai.HeaderText = "Nilai";
-            nilai.Name = "nilai";
-            // 
-            // predikat
-            // 
-            predikat.HeaderText = "Predikat";
-            predikat.Name = "predikat";
-            // 
             // CetakRapor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Azure;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(683, 377);
             Controls.Add(groupBox1);
             Controls.Add(btnBack);
             Controls.Add(btnCetak);
             Controls.Add(raporSiswa);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CetakRapor";
             Text = "CetakRapor";
             ((System.ComponentModel.ISupportInitialize)raporSiswa).EndInit();
