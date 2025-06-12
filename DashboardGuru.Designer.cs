@@ -106,7 +106,8 @@
             // 
             // btnCari
             // 
-            btnCari.BackColor = Color.LightSkyBlue;
+            btnCari.BackColor = Color.Azure;
+            btnCari.FlatStyle = FlatStyle.System;
             btnCari.Location = new Point(69, 66);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(59, 25);
