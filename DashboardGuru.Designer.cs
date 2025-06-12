@@ -46,9 +46,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(128, 7);
+            label1.Location = new Point(183, 12);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(171, 30);
+            label1.Size = new Size(261, 45);
             label1.TabIndex = 0;
             label1.Text = "Data Nilai Siswa";
             // 
@@ -76,11 +77,12 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataNilaiSiswa.DefaultCellStyle = dataGridViewCellStyle2;
             dataNilaiSiswa.EnableHeadersVisualStyles = false;
-            dataNilaiSiswa.Location = new Point(69, 95);
+            dataNilaiSiswa.Location = new Point(99, 158);
+            dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
             dataNilaiSiswa.Name = "dataNilaiSiswa";
             dataNilaiSiswa.RowHeadersVisible = false;
             dataNilaiSiswa.RowHeadersWidth = 62;
-            dataNilaiSiswa.Size = new Size(434, 219);
+            dataNilaiSiswa.Size = new Size(620, 365);
             dataNilaiSiswa.TabIndex = 1;
             dataNilaiSiswa.CellClick += dataNilaiSiswa_CellClick;
             // 
@@ -88,9 +90,10 @@
             // 
             inputNilai.BackColor = Color.LightSkyBlue;
             inputNilai.FlatStyle = FlatStyle.Flat;
-            inputNilai.Location = new Point(323, 320);
+            inputNilai.Location = new Point(461, 533);
+            inputNilai.Margin = new Padding(4, 5, 4, 5);
             inputNilai.Name = "inputNilai";
-            inputNilai.Size = new Size(84, 25);
+            inputNilai.Size = new Size(120, 42);
             inputNilai.TabIndex = 2;
             inputNilai.Text = "Input Nilai";
             inputNilai.UseVisualStyleBackColor = false;
@@ -98,19 +101,21 @@
             // 
             // txtCari
             // 
-            txtCari.Location = new Point(134, 68);
+            txtCari.Location = new Point(191, 117);
+            txtCari.Margin = new Padding(4, 5, 4, 5);
             txtCari.Name = "txtCari";
             txtCari.PlaceholderText = "Cari Nama Siswa";
-            txtCari.Size = new Size(370, 23);
+            txtCari.Size = new Size(527, 31);
             txtCari.TabIndex = 3;
             // 
             // btnCari
             // 
             btnCari.BackColor = Color.Azure;
             btnCari.FlatStyle = FlatStyle.System;
-            btnCari.Location = new Point(69, 66);
+            btnCari.Location = new Point(99, 110);
+            btnCari.Margin = new Padding(4, 5, 4, 5);
             btnCari.Name = "btnCari";
-            btnCari.Size = new Size(59, 25);
+            btnCari.Size = new Size(84, 42);
             btnCari.TabIndex = 4;
             btnCari.Text = "Cari";
             btnCari.UseVisualStyleBackColor = false;
@@ -119,9 +124,10 @@
             // 
             backBtn.BackColor = Color.LightSlateGray;
             backBtn.FlatStyle = FlatStyle.Flat;
-            backBtn.Location = new Point(412, 320);
+            backBtn.Location = new Point(589, 533);
+            backBtn.Margin = new Padding(4, 5, 4, 5);
             backBtn.Name = "backBtn";
-            backBtn.Size = new Size(84, 25);
+            backBtn.Size = new Size(120, 42);
             backBtn.TabIndex = 5;
             backBtn.Text = "Kembali";
             backBtn.UseVisualStyleBackColor = false;
@@ -130,18 +136,20 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(69, 15);
+            groupBox1.Location = new Point(99, 25);
+            groupBox1.Margin = new Padding(4, 5, 4, 5);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(434, 45);
+            groupBox1.Padding = new Padding(4, 5, 4, 5);
+            groupBox1.Size = new Size(620, 75);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
             // DashboardGuru
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(583, 354);
+            ClientSize = new Size(833, 590);
             Controls.Add(groupBox1);
             Controls.Add(backBtn);
             Controls.Add(btnCari);
@@ -149,6 +157,7 @@
             Controls.Add(inputNilai);
             Controls.Add(dataNilaiSiswa);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             Name = "DashboardGuru";
             Text = "Dashboard Guru";
             ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).EndInit();
