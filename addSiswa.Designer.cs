@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addSiswa));
             groupBox2 = new GroupBox();
             btnSimpan = new Button();
             btnBatal = new Button();
@@ -62,33 +63,37 @@
             // 
             // btnSimpan
             // 
-            btnSimpan.Location = new Point(392, 34);
+            btnSimpan.BackColor = Color.LightSkyBlue;
+            btnSimpan.FlatStyle = FlatStyle.Flat;
+            btnSimpan.Location = new Point(9, 33);
             btnSimpan.Margin = new Padding(4, 5, 4, 5);
             btnSimpan.Name = "btnSimpan";
-            btnSimpan.Size = new Size(107, 47);
+            btnSimpan.Size = new Size(116, 47);
             btnSimpan.TabIndex = 12;
             btnSimpan.Text = "Simpan";
-            btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.UseVisualStyleBackColor = false;
             btnSimpan.Click += btnSimpan_Click;
             // 
             // btnBatal
             // 
-            btnBatal.Location = new Point(507, 34);
+            btnBatal.BackColor = Color.LightSlateGray;
+            btnBatal.FlatStyle = FlatStyle.Flat;
+            btnBatal.Location = new Point(510, 33);
             btnBatal.Margin = new Padding(4, 5, 4, 5);
             btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(107, 47);
+            btnBatal.Size = new Size(114, 47);
             btnBatal.TabIndex = 13;
             btnBatal.Text = "Batal";
-            btnBatal.UseVisualStyleBackColor = true;
+            btnBatal.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(211, 43);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(246, 43);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(325, 37);
+            label1.Size = new Size(310, 45);
             label1.TabIndex = 16;
             label1.Text = "Tambah Siswa Baru";
             // 
@@ -104,7 +109,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.Black;
-            groupBox1.Location = new Point(59, 116);
+            groupBox1.Location = new Point(59, 117);
             groupBox1.Margin = new Padding(4, 5, 4, 5);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(4, 5, 4, 5);
@@ -119,14 +124,14 @@
             jkGroupBox.Controls.Add(jkLRadio);
             jkGroupBox.Location = new Point(187, 200);
             jkGroupBox.Name = "jkGroupBox";
-            jkGroupBox.Size = new Size(384, 71);
+            jkGroupBox.Size = new Size(384, 72);
             jkGroupBox.TabIndex = 14;
             jkGroupBox.TabStop = false;
             // 
             // jkPRadio
             // 
             jkPRadio.AutoSize = true;
-            jkPRadio.Location = new Point(195, 21);
+            jkPRadio.Location = new Point(194, 22);
             jkPRadio.Name = "jkPRadio";
             jkPRadio.Size = new Size(141, 32);
             jkPRadio.TabIndex = 1;
@@ -137,7 +142,7 @@
             // jkLRadio
             // 
             jkLRadio.AutoSize = true;
-            jkLRadio.Location = new Point(6, 21);
+            jkLRadio.Location = new Point(6, 22);
             jkLRadio.Name = "jkLRadio";
             jkLRadio.Size = new Size(112, 32);
             jkLRadio.TabIndex = 0;
@@ -147,32 +152,38 @@
             // 
             // inpNamaSiswa
             // 
+            inpNamaSiswa.BackColor = SystemColors.HighlightText;
             inpNamaSiswa.Location = new Point(187, 105);
             inpNamaSiswa.Margin = new Padding(4, 5, 4, 5);
             inpNamaSiswa.Name = "inpNamaSiswa";
+            inpNamaSiswa.PlaceholderText = "Masukkan Nama Siswa";
             inpNamaSiswa.Size = new Size(384, 33);
             inpNamaSiswa.TabIndex = 11;
             // 
             // inpNis
             // 
+            inpNis.BackColor = SystemColors.HighlightText;
             inpNis.Location = new Point(187, 53);
             inpNis.Margin = new Padding(4, 5, 4, 5);
             inpNis.Name = "inpNis";
+            inpNis.PlaceholderText = "Masukkan NIS";
             inpNis.Size = new Size(384, 33);
             inpNis.TabIndex = 10;
             // 
             // inpAlamat
             // 
-            inpAlamat.Location = new Point(187, 159);
+            inpAlamat.BackColor = SystemColors.HighlightText;
+            inpAlamat.Location = new Point(187, 158);
             inpAlamat.Margin = new Padding(4, 5, 4, 5);
             inpAlamat.Name = "inpAlamat";
+            inpAlamat.PlaceholderText = "Masukkan Alamat";
             inpAlamat.Size = new Size(384, 33);
             inpAlamat.TabIndex = 9;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(20, 221);
+            label6.Location = new Point(20, 222);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(136, 28);
@@ -182,7 +193,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(17, 159);
+            label4.Location = new Point(17, 158);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(75, 28);
@@ -202,7 +213,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(20, 56);
+            label2.Location = new Point(20, 57);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(44, 28);
@@ -213,11 +224,12 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Azure;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(751, 595);
             Controls.Add(groupBox2);
             Controls.Add(label1);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "addSiswa";
             Text = "Tambah Siswa";
             groupBox2.ResumeLayout(false);

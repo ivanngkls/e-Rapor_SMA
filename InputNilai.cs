@@ -28,6 +28,7 @@ namespace E_Raport_SMA
 
         private void loadData(string nama, string nis, double nilai, string mapel)
         {
+            inpNilai.Focus();
             inputNama.Text = nama;
             inputNis.Text = nis;
             inpNilai.Text = nilai.ToString();
@@ -37,6 +38,7 @@ namespace E_Raport_SMA
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            if (!validasiNilai()) return;
             using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
             {
                 conn.Open();
@@ -46,11 +48,26 @@ namespace E_Raport_SMA
                 cmd.Parameters.AddWithValue("nilai", inpNilai.Text);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                DashboardGuru dbGuru = new DashboardGuru(this.nipGuru, this.idKelas);
                 MessageBox.Show("Data berhasil di update", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                dbGuru.Show();
             }
+        }
+
+        private bool validasiNilai()
+        {
+            if (string.IsNullOrWhiteSpace(inpNilai.Text))
+            {
+                MessageBox.Show("Nilai wajib diisi", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inpNilai.Focus();
+                return false;
+            }
+            if(!int.TryParse(inpNilai.Text, out int nilai) || nilai > 100)
+            {
+                MessageBox.Show("Nilai harus kurang dari 100", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inpNilai.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }
