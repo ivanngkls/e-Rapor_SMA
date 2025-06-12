@@ -66,6 +66,7 @@ namespace E_Raport_SMA
                 selectedNilai = Convert.ToDouble(row.Cells["nilai"].Value);
                 selectedIdNilai = row.Cells["id nilai"].Value.ToString();
                 selectedMapel = row.Cells["mapel"].Value.ToString();
+
             }
         }
 

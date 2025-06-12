@@ -27,11 +27,6 @@ namespace E_Raport_SMA
             Load_DataSiswa();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void Load_DataSiswa()
         {
             try
@@ -111,6 +106,27 @@ namespace E_Raport_SMA
             Home home = new Home(this.nip);
             this.Hide();
             home.Show();
+        }
+
+        private void addSiswa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
+                {
+                    conn.Open();
+                    string getIdQuery = @"SELECT wk.id FROM walikelas wk JOIN guru g ON g.id = wk.id_guru WHERE g.nip = @nip";
+                    MySqlCommand getIdCmd = new MySqlCommand(getIdQuery, conn);
+                    getIdCmd.Parameters.AddWithValue("@nip", this.nip);
+                    object result = getIdCmd.ExecuteScalar();
+                    int idWaliKelas = Convert.ToInt32(result);
+                    addSiswa siswa = new addSiswa(idWaliKelas, this.nip);
+                    siswa.Show();
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menampilkan data siswa: " + ex, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

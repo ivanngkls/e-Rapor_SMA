@@ -74,6 +74,7 @@
             addSiswa.TabIndex = 5;
             addSiswa.Text = "Tambah Siswa";
             addSiswa.UseVisualStyleBackColor = true;
+            addSiswa.Click += addSiswa_Click;
             // 
             // updateSiswa
             // 

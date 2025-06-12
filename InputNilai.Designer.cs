@@ -39,7 +39,6 @@
             label2 = new Label();
             label1 = new Label();
             btnSimpan = new Button();
-            btnBatal = new Button();
             groupBox2 = new GroupBox();
             btnBack = new Button();
             groupBox1.SuspendLayout();
@@ -155,7 +154,7 @@
             // 
             // btnSimpan
             // 
-            btnSimpan.Location = new Point(9, 37);
+            btnSimpan.Location = new Point(381, 37);
             btnSimpan.Margin = new Padding(4, 5, 4, 5);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(107, 47);
@@ -164,21 +163,10 @@
             btnSimpan.UseVisualStyleBackColor = true;
             btnSimpan.Click += btnSimpan_Click;
             // 
-            // btnBatal
-            // 
-            btnBatal.Location = new Point(124, 37);
-            btnBatal.Margin = new Padding(4, 5, 4, 5);
-            btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(107, 47);
-            btnBatal.TabIndex = 13;
-            btnBatal.Text = "Batal";
-            btnBatal.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(btnBack);
             groupBox2.Controls.Add(btnSimpan);
-            groupBox2.Controls.Add(btnBatal);
             groupBox2.Location = new Point(49, 445);
             groupBox2.Margin = new Padding(4, 5, 4, 5);
             groupBox2.Name = "groupBox2";
@@ -189,11 +177,11 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(519, 37);
+            btnBack.Location = new Point(504, 37);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(107, 47);
             btnBack.TabIndex = 14;
-            btnBack.Text = "Kembali";
+            btnBack.Text = "Batal";
             btnBack.UseVisualStyleBackColor = true;
             // 
             // InputNilai
@@ -226,7 +214,6 @@
         private TextBox inpNilai;
         private TextBox inputNama;
         private TextBox inputNis;
-        private Button btnBatal;
         private Button btnSimpan;
         private GroupBox groupBox2;
         private Button btnBack;
