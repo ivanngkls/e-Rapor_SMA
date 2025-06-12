@@ -29,7 +29,7 @@ namespace E_Raport_SMA
                 try
                 {
                     conn.Open();
-                    string query = "SELECT nama, is_walikelas FROM guru WHERE nip = @nip";
+                    string query = "SELECT g.nama, g.is_walikelas, k.nama_kelas FROM guru g LEFT JOIN walikelas wk ON wk.id_guru = g.id LEFT JOIN kelas k ON k.id_walikelas = wk.id WHERE nip = @nip";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nip", this.nip);
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -38,11 +38,13 @@ namespace E_Raport_SMA
                     {
                         string namaGuru = reader["nama"].ToString();
                         bool isWalikelas = reader.GetBoolean("is_walikelas");
+                        string namaKelas = reader["nama_kelas"].ToString() ;
                         if (!isWalikelas)
                         {
                             kelasButton.Hide();
                         }
                         welcomeLabel.Text += $"\n {namaGuru}";
+                        kelasLabel.Text = $"Kelas {namaKelas}";
                     }
                 }
                 catch (Exception ex)
@@ -103,19 +105,10 @@ namespace E_Raport_SMA
             login.Show();
         }
 
-        private void kelasPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Home_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void kelasPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -36,6 +36,7 @@
             kelasPanel = new FlowLayoutPanel();
             label1 = new Label();
             panel1 = new Panel();
+            kelasLabel = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -93,14 +94,13 @@
             kelasPanel.Name = "kelasPanel";
             kelasPanel.Size = new Size(300, 342);
             kelasPanel.TabIndex = 4;
-            kelasPanel.Paint += kelasPanel_Paint_1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Azure;
-            label1.Location = new Point(600, 47);
+            label1.Location = new Point(587, 46);
             label1.Name = "label1";
             label1.Size = new Size(285, 63);
             label1.TabIndex = 5;
@@ -120,12 +120,25 @@
             panel1.Size = new Size(491, 645);
             panel1.TabIndex = 6;
             // 
+            // kelasLabel
+            // 
+            kelasLabel.AutoSize = true;
+            kelasLabel.Font = new Font("Stencil", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            kelasLabel.ForeColor = Color.Azure;
+            kelasLabel.Location = new Point(587, 505);
+            kelasLabel.Name = "kelasLabel";
+            kelasLabel.Size = new Size(132, 43);
+            kelasLabel.TabIndex = 7;
+            kelasLabel.Text = "Kelas";
+            kelasLabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(976, 628);
+            Controls.Add(kelasLabel);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(kelasPanel);
@@ -148,5 +161,6 @@
         private FlowLayoutPanel kelasPanel;
         private Label label1;
         private Panel panel1;
+        private Label kelasLabel;
     }
 }
