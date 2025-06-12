@@ -84,12 +84,14 @@
             // 
             // btnCari
             // 
+            btnCari.BackColor = Color.LightSkyBlue;
+            btnCari.FlatStyle = FlatStyle.System;
             btnCari.Location = new Point(69, 66);
             btnCari.Name = "btnCari";
-            btnCari.Size = new Size(51, 23);
+            btnCari.Size = new Size(59, 25);
             btnCari.TabIndex = 4;
             btnCari.Text = "Cari";
-            btnCari.UseVisualStyleBackColor = true;
+            btnCari.UseVisualStyleBackColor = false;
             // 
             // backBtn
             // 

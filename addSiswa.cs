@@ -53,7 +53,7 @@ namespace E_Raport_SMA
                     string raportQuery = @"INSERT INTO raport(id_siswa, id_walikelas, semester) VALUES (@id_siswa, @id_walikelas, '1')";
                     MySqlCommand raportCmd = new MySqlCommand(raportQuery, conn);
                     raportCmd.Parameters.AddWithValue("@id_walikelas", this.idWaliKelas);
-                    raportCmd.Parameters.AddWithValue("@id_siswa",idSiswaBaru);
+                    raportCmd.Parameters.AddWithValue("@id_siswa", idSiswaBaru);
                     raportCmd.ExecuteNonQuery();
 
                     DashboardWaliKelas waliKelas = new DashboardWaliKelas(this.nipGuru);
@@ -77,6 +77,11 @@ namespace E_Raport_SMA
                 }
             }
             return null;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

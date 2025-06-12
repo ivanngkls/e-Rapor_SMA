@@ -51,7 +51,7 @@
             BackBtn.FlatStyle = FlatStyle.Flat;
             BackBtn.Location = new Point(556, 323);
             BackBtn.Name = "BackBtn";
-            BackBtn.Size = new Size(72, 23);
+            BackBtn.Size = new Size(72, 31);
             BackBtn.TabIndex = 3;
             BackBtn.Text = "Kembali";
             BackBtn.UseVisualStyleBackColor = false;
@@ -63,7 +63,7 @@
             btnLihatRapor.FlatStyle = FlatStyle.Flat;
             btnLihatRapor.Location = new Point(453, 323);
             btnLihatRapor.Name = "btnLihatRapor";
-            btnLihatRapor.Size = new Size(98, 23);
+            btnLihatRapor.Size = new Size(98, 31);
             btnLihatRapor.TabIndex = 4;
             btnLihatRapor.Text = "Lihat Rapor";
             btnLihatRapor.UseVisualStyleBackColor = false;
@@ -74,7 +74,7 @@
             addSiswa.FlatStyle = FlatStyle.Flat;
             addSiswa.Location = new Point(48, 323);
             addSiswa.Name = "addSiswa";
-            addSiswa.Size = new Size(98, 23);
+            addSiswa.Size = new Size(98, 31);
             addSiswa.TabIndex = 5;
             addSiswa.Text = "Tambah Siswa";
             addSiswa.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             updateSiswa.FlatStyle = FlatStyle.Flat;
             updateSiswa.Location = new Point(152, 323);
             updateSiswa.Name = "updateSiswa";
-            updateSiswa.Size = new Size(98, 23);
+            updateSiswa.Size = new Size(98, 31);
             updateSiswa.TabIndex = 6;
             updateSiswa.Text = "Update Siswa";
             updateSiswa.UseVisualStyleBackColor = false;
@@ -178,7 +178,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(683, 377);
+            ClientSize = new Size(683, 398);
             Controls.Add(updateSiswa);
             Controls.Add(addSiswa);
             Controls.Add(btnLihatRapor);
