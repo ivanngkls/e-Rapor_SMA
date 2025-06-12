@@ -43,8 +43,11 @@ namespace E_Raport_SMA
                         {
                             kelasButton.Hide();
                         }
-                        welcomeLabel.Text += $"\n {namaGuru}";
-                        kelasLabel.Text = $"Kelas {namaKelas}";
+                        else
+                        {
+                            kelasLabel.Text = $"Kelas {namaKelas}";
+                        }
+                        welcomeLabel.Text = $"Selamat Datang\n{namaGuru}";
                     }
                 }
                 catch (Exception ex)
