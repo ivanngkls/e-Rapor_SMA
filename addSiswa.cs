@@ -18,12 +18,14 @@ namespace E_Raport_SMA
         public addSiswa(int idWalikelas, string nip)
         {
             InitializeComponent();
+            inpNis.Focus();
             this.idWaliKelas = idWalikelas;
             this.nipGuru = nip;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            if (!validasiInput()) return;
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
@@ -101,7 +103,32 @@ namespace E_Raport_SMA
                     return rb.Text == "Laki-laki" ? "L" : "P";
                 }
             }
-            return null;
+            return "L";
+        }
+
+        private bool validasiInput()
+        {
+            if (string.IsNullOrWhiteSpace(inpNis.Text))
+            {
+                MessageBox.Show("NIS wajib diisi", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inpNis.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(inpNamaSiswa.Text)) 
+            {
+                MessageBox.Show("Nama wajib diisi", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inpNamaSiswa.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(inpAlamat.Text))
+            {
+                MessageBox.Show("Alamat wajib diisi", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                inpAlamat.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }
