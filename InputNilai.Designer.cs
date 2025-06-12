@@ -69,6 +69,7 @@
             // 
             inpMapel.Location = new Point(133, 101);
             inpMapel.Name = "inpMapel";
+            inpMapel.PlaceholderText = "Masukkan Mata Pelajaran";
             inpMapel.ReadOnly = true;
             inpMapel.Size = new Size(177, 25);
             inpMapel.TabIndex = 12;
@@ -77,6 +78,7 @@
             // 
             inpNilai.Location = new Point(133, 134);
             inpNilai.Name = "inpNilai";
+            inpNilai.PlaceholderText = "Masukkan Nilai";
             inpNilai.Size = new Size(177, 25);
             inpNilai.TabIndex = 9;
             // 
@@ -84,6 +86,7 @@
             // 
             inputNama.Location = new Point(134, 69);
             inputNama.Name = "inputNama";
+            inputNama.PlaceholderText = "Masukkan Nama Siswa";
             inputNama.ReadOnly = true;
             inputNama.Size = new Size(177, 25);
             inputNama.TabIndex = 6;
@@ -92,6 +95,7 @@
             // 
             inputNis.Location = new Point(134, 38);
             inputNis.Name = "inputNis";
+            inputNis.PlaceholderText = "Masukkan NIS";
             inputNis.ReadOnly = true;
             inputNis.Size = new Size(177, 25);
             inputNis.TabIndex = 5;
@@ -154,7 +158,7 @@
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
             btnSimpan.Click += btnSimpan_Click;
-            //
+            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(btnBack);

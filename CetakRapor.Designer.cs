@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CetakRapor));
             label1 = new Label();
             semester = new ComboBox();
@@ -67,20 +69,41 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(20, 52);
             label2.Name = "label2";
-            label2.Size = new Size(56, 15);
+            label2.Size = new Size(61, 15);
             label2.TabIndex = 2;
             label2.Text = "Semester";
             // 
             // raporSiswa
             // 
+            raporSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             raporSiswa.BackgroundColor = Color.White;
-            raporSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            raporSiswa.BorderStyle = BorderStyle.None;
+            raporSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            raporSiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             raporSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, mapel, nilai, predikat });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            raporSiswa.DefaultCellStyle = dataGridViewCellStyle2;
+            raporSiswa.EnableHeadersVisualStyles = false;
+            raporSiswa.GridColor = SystemColors.MenuText;
             raporSiswa.Location = new Point(20, 92);
             raporSiswa.Name = "raporSiswa";
+            raporSiswa.RowHeadersVisible = false;
             raporSiswa.RowHeadersWidth = 62;
             raporSiswa.Size = new Size(646, 233);
             raporSiswa.TabIndex = 3;
@@ -91,42 +114,36 @@
             nis.HeaderText = "NIS";
             nis.MinimumWidth = 8;
             nis.Name = "nis";
-            nis.Width = 150;
             // 
             // nama
             // 
             nama.HeaderText = "Nama Siswa";
             nama.MinimumWidth = 8;
             nama.Name = "nama";
-            nama.Width = 150;
             // 
             // kelas
             // 
             kelas.HeaderText = "Kelas";
             kelas.MinimumWidth = 8;
             kelas.Name = "kelas";
-            kelas.Width = 150;
             // 
             // mapel
             // 
             mapel.HeaderText = "Mata Pelajaran";
             mapel.MinimumWidth = 8;
             mapel.Name = "mapel";
-            mapel.Width = 150;
             // 
             // nilai
             // 
             nilai.HeaderText = "Nilai";
             nilai.MinimumWidth = 8;
             nilai.Name = "nilai";
-            nilai.Width = 150;
             // 
             // predikat
             // 
             predikat.HeaderText = "Predikat";
             predikat.MinimumWidth = 8;
             predikat.Name = "predikat";
-            predikat.Width = 150;
             // 
             // btnCetak
             // 

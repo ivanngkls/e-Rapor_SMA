@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardGuru));
             label1 = new Label();
             dataNilaiSiswa = new DataGridView();
@@ -52,11 +54,31 @@
             // 
             // dataNilaiSiswa
             // 
+            dataNilaiSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataNilaiSiswa.BackgroundColor = Color.White;
-            dataNilaiSiswa.BorderStyle = BorderStyle.Fixed3D;
+            dataNilaiSiswa.BorderStyle = BorderStyle.None;
+            dataNilaiSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.LightSkyBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataNilaiSiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataNilaiSiswa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataNilaiSiswa.EnableHeadersVisualStyles = false;
             dataNilaiSiswa.Location = new Point(69, 95);
             dataNilaiSiswa.Name = "dataNilaiSiswa";
+            dataNilaiSiswa.RowHeadersVisible = false;
             dataNilaiSiswa.RowHeadersWidth = 62;
             dataNilaiSiswa.Size = new Size(434, 219);
             dataNilaiSiswa.TabIndex = 1;
@@ -85,7 +107,6 @@
             // btnCari
             // 
             btnCari.BackColor = Color.LightSkyBlue;
-            btnCari.FlatStyle = FlatStyle.System;
             btnCari.Location = new Point(69, 66);
             btnCari.Name = "btnCari";
             btnCari.Size = new Size(59, 25);

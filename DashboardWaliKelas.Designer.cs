@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardWaliKelas));
             BackBtn = new Button();
             btnLihatRapor = new Button();
@@ -165,10 +167,31 @@
             // 
             // dataSiswa
             // 
+            dataSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataSiswa.BackgroundColor = Color.White;
+            dataSiswa.BorderStyle = BorderStyle.None;
+            dataSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataSiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataSiswa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataSiswa.EnableHeadersVisualStyles = false;
             dataSiswa.Location = new Point(11, 77);
             dataSiswa.Name = "dataSiswa";
+            dataSiswa.RowHeadersVisible = false;
             dataSiswa.RowHeadersWidth = 62;
             dataSiswa.Size = new Size(570, 172);
             dataSiswa.TabIndex = 4;
