@@ -154,23 +154,11 @@
             btnSimpan.Text = "Simpan";
             btnSimpan.UseVisualStyleBackColor = false;
             btnSimpan.Click += btnSimpan_Click;
-            // 
-            // btnBatal
-            // 
-            btnBatal.BackColor = Color.Crimson;
-            btnBatal.FlatStyle = FlatStyle.Flat;
-            btnBatal.Location = new Point(87, 22);
-            btnBatal.Name = "btnBatal";
-            btnBatal.Size = new Size(75, 28);
-            btnBatal.TabIndex = 13;
-            btnBatal.Text = "Batal";
-            btnBatal.UseVisualStyleBackColor = false;
-            // 
+            //
             // groupBox2
             // 
             groupBox2.Controls.Add(btnBack);
             groupBox2.Controls.Add(btnSimpan);
-            groupBox2.Controls.Add(btnBatal);
             groupBox2.Location = new Point(34, 267);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(443, 60);
