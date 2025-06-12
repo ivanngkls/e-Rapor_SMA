@@ -145,7 +145,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Home";
             Text = "Home";
-            Load += Home_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

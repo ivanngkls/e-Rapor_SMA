@@ -62,7 +62,6 @@ namespace E_Raport_SMA
 
                     int offset = (currentPage - 1) * pageSize;
 
-
                     string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@limit", pageSize);
@@ -72,8 +71,9 @@ namespace E_Raport_SMA
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-
                     dataSiswa.DataSource = dt;
+
+                  
                     pageInfoLabel.Text = $"Halaman {currentPage} dari {totalPages}";
                 }
             }
@@ -121,7 +121,8 @@ namespace E_Raport_SMA
                     object result = getIdCmd.ExecuteScalar();
                     int idWaliKelas = Convert.ToInt32(result);
                     addSiswa siswa = new addSiswa(idWaliKelas, this.nip);
-                    siswa.Show();
+                    siswa.ShowDialog();
+                    Load_DataSiswa() ;
                 }
             }catch (Exception ex)
             {

@@ -63,7 +63,7 @@ namespace E_Raport_SMA
 
                     using (var reader = getPelajaranCmd.ExecuteReader())
                     {
-                        List<int> idPelajarans= new List<int>();
+                        List<int> idPelajarans = new List<int>();
                         while (reader.Read())
                         {
                             idPelajarans.Add(reader.GetInt32("id"));
@@ -71,7 +71,7 @@ namespace E_Raport_SMA
 
                         reader.Close();
 
-                        foreach(int idPel in idPelajarans)
+                        foreach (int idPel in idPelajarans)
                         {
                             string insertNilaiQuery = "INSERT INTO nilai(id_pelajaran, id_raport) VALUES(@id_pelajaran, @id_raport)";
                             using (MySqlCommand insertNilaiCmd = new MySqlCommand(insertNilaiQuery, conn))
@@ -80,11 +80,9 @@ namespace E_Raport_SMA
                                 insertNilaiCmd.Parameters.AddWithValue("@id_raport", idRaportBaru);
                                 insertNilaiCmd.ExecuteNonQuery();
                             }
-                        }
 
-                        DashboardWaliKelas waliKelas = new DashboardWaliKelas(this.nipGuru);
-                        this.Close();
-                        waliKelas.Show();
+                            this.Close();
+                        }
                     }
                 }
             }
@@ -104,11 +102,6 @@ namespace E_Raport_SMA
                 }
             }
             return null;
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

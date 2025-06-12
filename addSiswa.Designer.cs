@@ -117,7 +117,6 @@
             groupBox1.TabIndex = 15;
             groupBox1.TabStop = false;
             groupBox1.Text = "Form Data Siswa";
-            groupBox1.Enter += groupBox1_Enter;
             // 
             // jkGroupBox
             // 

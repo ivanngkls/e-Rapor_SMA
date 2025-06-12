@@ -42,6 +42,7 @@ namespace E_Raport_SMA
                         if (!isWalikelas)
                         {
                             kelasButton.Hide();
+                            kelasLabel.Hide();
                         }
                         else
                         {
@@ -106,11 +107,6 @@ namespace E_Raport_SMA
             this.Close();
             Login login = new Login();
             login.Show();
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-
         }
 
     }

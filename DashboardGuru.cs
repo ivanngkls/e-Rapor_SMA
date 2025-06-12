@@ -38,7 +38,7 @@ namespace E_Raport_SMA
                     //executeScalar -> untuk ambil satu baris saja
                     int idGuru = Convert.ToInt32(IdGuruCmd.ExecuteScalar());
 
-                    string query = "SELECT  s.nis,  s.nama, n.nilai_angka AS 'nilai', mp.nama_mata_pelajaran AS 'mapel', n.id as 'id nilai' FROM  siswa s JOIN raport r ON s.id = r.id_siswa JOIN nilai n ON n.id_raport = r.id JOIN pelajaran p ON p.id = n.id_pelajaran JOIN mata_pelajaran mp ON mp.id = p.id_mata_pelajaran JOIN guru g ON g.id = p.id_guru WHERE s.id_kelas = @idKelas AND p.id_guru = @idGuru";
+                    string query = "SELECT  s.nis,  s.nama, n.nilai_angka AS 'nilai', mp.nama_mata_pelajaran AS 'mapel', n.id as 'id nilai' FROM  siswa s JOIN raport r ON s.id = r.id_siswa JOIN nilai n ON n.id_raport = r.id JOIN pelajaran p ON p.id = n.id_pelajaran JOIN mata_pelajaran mp ON mp.id = p.id_mata_pelajaran JOIN guru g ON g.id = p.id_guru WHERE s.id_kelas = @idKelas AND p.id_guru = @idGuru ORDER BY mp.nama_mata_pelajaran";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@idGuru", idGuru);
@@ -48,6 +48,7 @@ namespace E_Raport_SMA
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dataNilaiSiswa.DataSource = dt;
+                    dataNilaiSiswa.Columns["id nilai"].Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -73,19 +74,13 @@ namespace E_Raport_SMA
         private void inputNilai_Click(object sender, EventArgs e)
         {
             InputNilai formNilai = new InputNilai(selectedNama, selectedNIS, selectedNilai, selectedMapel, selectedIdNilai, this.nipGuru, this.idKelas);
-            formNilai.Show();
+            formNilai.ShowDialog();
         }
 
-        private void txtCari_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home(this.nipGuru);
-            this.Hide();
-            home.Show();
+            this.Close();
         }
     }
 }

@@ -46,10 +46,8 @@ namespace E_Raport_SMA
                 cmd.Parameters.AddWithValue("nilai", inpNilai.Text);
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                DashboardGuru dbGuru = new DashboardGuru(this.nipGuru, this.idKelas);
                 MessageBox.Show("Data berhasil di update", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                dbGuru.Show();
             }
         }
     }

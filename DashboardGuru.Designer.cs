@@ -132,7 +132,7 @@
             backBtn.TabIndex = 5;
             backBtn.Text = "Kembali";
             backBtn.UseVisualStyleBackColor = false;
-            backBtn.Click += btnLogout_Click;
+            backBtn.Click += backBtn_Click;
             // 
             // groupBox1
             // 
