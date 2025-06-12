@@ -15,7 +15,7 @@ namespace E_Raport_SMA
     public partial class DashboardWaliKelas : Form
     {
         private string nip;
-
+        private int selectedIdSiswa = -1;
         int pageSize = 5;
         int currentPage = 1;
         int totalPages = 1;
@@ -62,7 +62,7 @@ namespace E_Raport_SMA
 
                     int offset = (currentPage - 1) * pageSize;
 
-                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
+                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai', s.id as 'id siswa' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@limit", pageSize);
                     cmd.Parameters.AddWithValue("@id", idWaliKelas);
@@ -72,8 +72,8 @@ namespace E_Raport_SMA
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
                     dataSiswa.DataSource = dt;
+                    dataSiswa.Columns["id siswa"].Visible = false;
 
-                  
                     pageInfoLabel.Text = $"Halaman {currentPage} dari {totalPages}";
                 }
             }
@@ -122,11 +122,44 @@ namespace E_Raport_SMA
                     int idWaliKelas = Convert.ToInt32(result);
                     addSiswa siswa = new addSiswa(idWaliKelas, this.nip);
                     siswa.ShowDialog();
-                    Load_DataSiswa() ;
+                    Load_DataSiswa();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Gagal menampilkan data siswa: " + ex, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dataSiswa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataSiswa.Rows[e.RowIndex];
+                selectedIdSiswa = Convert.ToInt32(row.Cells["id siswa"].Value);
+            }
+        }
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (selectedIdSiswa == -1) return;
+            DialogResult result = MessageBox.Show("Apakah Kamu Yakin menghapus siswa ini dari kelas Anda?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result != DialogResult.Yes) return;
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
+                {
+                    conn.Open();
+                    string deleteSiswaQuery = "DELETE FROM siswa WHERE id = @id";
+                    MySqlCommand deleteCmd = new MySqlCommand(deleteSiswaQuery, conn);
+                    deleteCmd.Parameters.AddWithValue("@id", selectedIdSiswa);
+                    deleteCmd.ExecuteNonQuery();
+                    Load_DataSiswa();
+                    MessageBox.Show("Data Siswa Berhasil Dihapus", "Success");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal menghapus data: " + ex, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
