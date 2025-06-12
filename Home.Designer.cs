@@ -48,7 +48,7 @@
             welcomeLabel.Size = new Size(417, 70);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
-            welcomeLabel.TextAlign = ContentAlignment.MiddleLeft;
+            welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // inputNilaiButton
             // 

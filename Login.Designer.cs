@@ -76,7 +76,7 @@
             // 
             // txtNIP
             // 
-            txtNIP.BackColor = SystemColors.ScrollBar;
+            txtNIP.BackColor = SystemColors.HighlightText;
             txtNIP.Font = new Font("Segoe UI", 10F);
             txtNIP.Location = new Point(147, 187);
             txtNIP.Margin = new Padding(4, 5, 4, 5);
@@ -87,7 +87,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.BackColor = SystemColors.ScrollBar;
+            txtPassword.BackColor = SystemColors.HighlightText;
             txtPassword.Font = new Font("Segoe UI", 10F);
             txtPassword.Location = new Point(147, 248);
             txtPassword.Margin = new Padding(4, 5, 4, 5);
