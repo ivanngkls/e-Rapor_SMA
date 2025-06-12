@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardWaliKelas));
             BackBtn = new Button();
             btnLihatRapor = new Button();
             addSiswa = new Button();
@@ -46,31 +47,34 @@
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(795, 539);
-            BackBtn.Margin = new Padding(4, 5, 4, 5);
+            BackBtn.BackColor = Color.LightSlateGray;
+            BackBtn.FlatStyle = FlatStyle.Flat;
+            BackBtn.Location = new Point(556, 323);
             BackBtn.Name = "BackBtn";
-            BackBtn.Size = new Size(103, 38);
+            BackBtn.Size = new Size(72, 23);
             BackBtn.TabIndex = 3;
             BackBtn.Text = "Kembali";
-            BackBtn.UseVisualStyleBackColor = true;
+            BackBtn.UseVisualStyleBackColor = false;
             BackBtn.Click += BackBtn_Click;
             // 
             // btnLihatRapor
             // 
-            btnLihatRapor.Location = new Point(647, 539);
-            btnLihatRapor.Margin = new Padding(4, 5, 4, 5);
+            btnLihatRapor.BackColor = Color.LightSkyBlue;
+            btnLihatRapor.FlatStyle = FlatStyle.Flat;
+            btnLihatRapor.Location = new Point(453, 323);
             btnLihatRapor.Name = "btnLihatRapor";
-            btnLihatRapor.Size = new Size(140, 38);
+            btnLihatRapor.Size = new Size(98, 23);
             btnLihatRapor.TabIndex = 4;
             btnLihatRapor.Text = "Lihat Rapor";
-            btnLihatRapor.UseVisualStyleBackColor = true;
+            btnLihatRapor.UseVisualStyleBackColor = false;
             // 
             // addSiswa
             // 
-            addSiswa.Location = new Point(68, 539);
-            addSiswa.Margin = new Padding(4, 5, 4, 5);
+            addSiswa.BackColor = Color.LightSkyBlue;
+            addSiswa.FlatStyle = FlatStyle.Flat;
+            addSiswa.Location = new Point(48, 323);
             addSiswa.Name = "addSiswa";
-            addSiswa.Size = new Size(140, 38);
+            addSiswa.Size = new Size(98, 23);
             addSiswa.TabIndex = 5;
             addSiswa.Text = "Tambah Siswa";
             addSiswa.UseVisualStyleBackColor = true;
@@ -78,42 +82,40 @@
             // 
             // updateSiswa
             // 
-            updateSiswa.Location = new Point(217, 539);
-            updateSiswa.Margin = new Padding(4, 5, 4, 5);
+            updateSiswa.BackColor = Color.MediumPurple;
+            updateSiswa.FlatStyle = FlatStyle.Flat;
+            updateSiswa.Location = new Point(152, 323);
             updateSiswa.Name = "updateSiswa";
-            updateSiswa.Size = new Size(140, 38);
+            updateSiswa.Size = new Size(98, 23);
             updateSiswa.TabIndex = 6;
             updateSiswa.Text = "Update Siswa";
-            updateSiswa.UseVisualStyleBackColor = true;
+            updateSiswa.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(331, -12);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(232, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 45);
+            label1.Size = new Size(119, 30);
             label1.TabIndex = 0;
             label1.Text = "Data Siswa";
             // 
             // btnCariSiswa
             // 
-            btnCariSiswa.Location = new Point(16, 58);
-            btnCariSiswa.Margin = new Padding(4, 5, 4, 5);
+            btnCariSiswa.Location = new Point(11, 37);
             btnCariSiswa.Name = "btnCariSiswa";
-            btnCariSiswa.Size = new Size(71, 38);
+            btnCariSiswa.Size = new Size(50, 25);
             btnCariSiswa.TabIndex = 2;
             btnCariSiswa.Text = "Cari";
             btnCariSiswa.UseVisualStyleBackColor = true;
             // 
             // cariTxt
             // 
-            cariTxt.Location = new Point(109, 62);
-            cariTxt.Margin = new Padding(4, 5, 4, 5);
+            cariTxt.Location = new Point(70, 39);
             cariTxt.Name = "cariTxt";
             cariTxt.PlaceholderText = "Cari Nama Siswa";
-            cariTxt.Size = new Size(721, 31);
+            cariTxt.Size = new Size(506, 23);
             cariTxt.TabIndex = 3;
             // 
             // groupBox1
@@ -125,29 +127,27 @@
             groupBox1.Controls.Add(cariTxt);
             groupBox1.Controls.Add(btnCariSiswa);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(68, 51);
-            groupBox1.Margin = new Padding(4, 5, 4, 5);
+            groupBox1.Location = new Point(48, 31);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 5, 4, 5);
-            groupBox1.Size = new Size(838, 478);
+            groupBox1.Size = new Size(587, 287);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
             // pageInfoLabel
             // 
             pageInfoLabel.AutoSize = true;
-            pageInfoLabel.Location = new Point(698, 433);
+            pageInfoLabel.Location = new Point(489, 260);
+            pageInfoLabel.Margin = new Padding(2, 0, 2, 0);
             pageInfoLabel.Name = "pageInfoLabel";
-            pageInfoLabel.Size = new Size(132, 25);
+            pageInfoLabel.Size = new Size(87, 15);
             pageInfoLabel.TabIndex = 9;
             pageInfoLabel.Text = "Halaman 1 dari";
             // 
             // nextBtn
             // 
-            nextBtn.Location = new Point(113, 426);
-            nextBtn.Margin = new Padding(4, 5, 4, 5);
+            nextBtn.Location = new Point(79, 256);
             nextBtn.Name = "nextBtn";
-            nextBtn.Size = new Size(89, 38);
+            nextBtn.Size = new Size(62, 23);
             nextBtn.TabIndex = 8;
             nextBtn.Text = "Next >";
             nextBtn.UseVisualStyleBackColor = true;
@@ -155,10 +155,9 @@
             // 
             // prevBtn
             // 
-            prevBtn.Location = new Point(16, 426);
-            prevBtn.Margin = new Padding(4, 5, 4, 5);
+            prevBtn.Location = new Point(11, 256);
             prevBtn.Name = "prevBtn";
-            prevBtn.Size = new Size(89, 38);
+            prevBtn.Size = new Size(62, 23);
             prevBtn.TabIndex = 7;
             prevBtn.Text = "< Prev";
             prevBtn.UseVisualStyleBackColor = true;
@@ -168,25 +167,24 @@
             // 
             dataSiswa.BackgroundColor = Color.White;
             dataSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataSiswa.Location = new Point(16, 129);
-            dataSiswa.Margin = new Padding(4, 5, 4, 5);
+            dataSiswa.Location = new Point(11, 77);
             dataSiswa.Name = "dataSiswa";
             dataSiswa.RowHeadersWidth = 62;
-            dataSiswa.Size = new Size(814, 287);
+            dataSiswa.Size = new Size(570, 172);
             dataSiswa.TabIndex = 4;
             // 
             // DashboardWaliKelas
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Azure;
-            ClientSize = new Size(976, 628);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(683, 377);
             Controls.Add(updateSiswa);
             Controls.Add(addSiswa);
             Controls.Add(btnLihatRapor);
             Controls.Add(BackBtn);
             Controls.Add(groupBox1);
-            Margin = new Padding(4, 5, 4, 5);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DashboardWaliKelas";
             Text = "Dashboard Wali Kelas";
             groupBox1.ResumeLayout(false);
