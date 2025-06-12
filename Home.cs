@@ -102,5 +102,20 @@ namespace E_Raport_SMA
             Login login = new Login();
             login.Show();
         }
+
+        private void kelasPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kelasPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
