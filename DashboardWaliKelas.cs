@@ -162,5 +162,11 @@ namespace E_Raport_SMA
                 MessageBox.Show("Gagal menghapus data: " + ex, "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnLihatRapor_Click(object sender, EventArgs e)
+        {
+            CetakRapor raport = new CetakRapor(this.selectedIdSiswa);
+            raport.ShowDialog();
+        }
     }
 }

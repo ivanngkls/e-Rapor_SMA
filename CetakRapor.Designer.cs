@@ -35,12 +35,6 @@
             semester = new ComboBox();
             label2 = new Label();
             raporSiswa = new DataGridView();
-            nis = new DataGridViewTextBoxColumn();
-            nama = new DataGridViewTextBoxColumn();
-            kelas = new DataGridViewTextBoxColumn();
-            mapel = new DataGridViewTextBoxColumn();
-            nilai = new DataGridViewTextBoxColumn();
-            predikat = new DataGridViewTextBoxColumn();
             btnCetak = new Button();
             btnBack = new Button();
             groupBox1 = new GroupBox();
@@ -86,7 +80,7 @@
             raporSiswa.BorderStyle = BorderStyle.None;
             raporSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
+            dataGridViewCellStyle1.BackColor = Color.LightSkyBlue;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
@@ -94,7 +88,6 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             raporSiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             raporSiswa.ColumnHeadersHeight = 34;
-            raporSiswa.Columns.AddRange(new DataGridViewColumn[] { nis, nama, kelas, mapel, nilai, predikat });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -114,49 +107,6 @@
             raporSiswa.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             raporSiswa.Size = new Size(923, 388);
             raporSiswa.TabIndex = 3;
-            raporSiswa.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // nis
-            // 
-            nis.HeaderText = "NIS";
-            nis.MinimumWidth = 8;
-            nis.Name = "nis";
-            nis.ReadOnly = true;
-            // 
-            // nama
-            // 
-            nama.HeaderText = "Nama Siswa";
-            nama.MinimumWidth = 8;
-            nama.Name = "nama";
-            nama.ReadOnly = true;
-            // 
-            // kelas
-            // 
-            kelas.HeaderText = "Kelas";
-            kelas.MinimumWidth = 8;
-            kelas.Name = "kelas";
-            kelas.ReadOnly = true;
-            // 
-            // mapel
-            // 
-            mapel.HeaderText = "Mata Pelajaran";
-            mapel.MinimumWidth = 8;
-            mapel.Name = "mapel";
-            mapel.ReadOnly = true;
-            // 
-            // nilai
-            // 
-            nilai.HeaderText = "Nilai";
-            nilai.MinimumWidth = 8;
-            nilai.Name = "nilai";
-            nilai.ReadOnly = true;
-            // 
-            // predikat
-            // 
-            predikat.HeaderText = "Predikat";
-            predikat.MinimumWidth = 8;
-            predikat.Name = "predikat";
-            predikat.ReadOnly = true;
             // 
             // btnCetak
             // 
@@ -169,6 +119,7 @@
             btnCetak.TabIndex = 4;
             btnCetak.Text = "Cetak Rapor";
             btnCetak.UseVisualStyleBackColor = false;
+            btnCetak.Click += btnCetak_Click;
             // 
             // btnBack
             // 
@@ -224,11 +175,5 @@
         private Button btnCetak;
         private Button btnBack;
         private GroupBox groupBox1;
-        private DataGridViewTextBoxColumn nis;
-        private DataGridViewTextBoxColumn nama;
-        private DataGridViewTextBoxColumn kelas;
-        private DataGridViewTextBoxColumn mapel;
-        private DataGridViewTextBoxColumn nilai;
-        private DataGridViewTextBoxColumn predikat;
     }
 }
