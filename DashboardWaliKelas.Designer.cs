@@ -43,6 +43,7 @@
             nextBtn = new Button();
             prevBtn = new Button();
             dataSiswa = new DataGridView();
+            deleteBtn = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataSiswa).BeginInit();
             SuspendLayout();
@@ -206,6 +207,20 @@
             dataSiswa.RowHeadersWidth = 62;
             dataSiswa.Size = new Size(814, 287);
             dataSiswa.TabIndex = 4;
+            dataSiswa.CellClick += dataSiswa_CellClick;
+            // 
+            // deleteBtn
+            // 
+            deleteBtn.BackColor = Color.MediumPurple;
+            deleteBtn.FlatStyle = FlatStyle.Flat;
+            deleteBtn.Location = new Point(365, 538);
+            deleteBtn.Margin = new Padding(4, 5, 4, 5);
+            deleteBtn.Name = "deleteBtn";
+            deleteBtn.Size = new Size(140, 52);
+            deleteBtn.TabIndex = 7;
+            deleteBtn.Text = "Hapus Siswa";
+            deleteBtn.UseVisualStyleBackColor = false;
+            deleteBtn.Click += deleteBtn_Click;
             // 
             // DashboardWaliKelas
             // 
@@ -213,6 +228,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(976, 663);
+            Controls.Add(deleteBtn);
             Controls.Add(updateSiswa);
             Controls.Add(addSiswa);
             Controls.Add(btnLihatRapor);
@@ -244,5 +260,6 @@
         private Button nextBtn;
         private Button prevBtn;
         private Label pageInfoLabel;
+        private Button deleteBtn;
     }
 }
