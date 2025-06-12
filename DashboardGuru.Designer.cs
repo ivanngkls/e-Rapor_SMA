@@ -80,6 +80,7 @@
             dataNilaiSiswa.Location = new Point(99, 158);
             dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
             dataNilaiSiswa.Name = "dataNilaiSiswa";
+            dataNilaiSiswa.ReadOnly = true;
             dataNilaiSiswa.RowHeadersVisible = false;
             dataNilaiSiswa.RowHeadersWidth = 62;
             dataNilaiSiswa.Size = new Size(620, 365);

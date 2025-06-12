@@ -43,10 +43,9 @@
             // 
             welcomeLabel.AutoSize = true;
             welcomeLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            welcomeLabel.Location = new Point(37, 40);
-            welcomeLabel.Margin = new Padding(2, 0, 2, 0);
+            welcomeLabel.Location = new Point(53, 67);
             welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(284, 47);
+            welcomeLabel.Size = new Size(417, 70);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
             welcomeLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -55,10 +54,9 @@
             // 
             inputNilaiButton.BackColor = Color.LightSkyBlue;
             inputNilaiButton.FlatStyle = FlatStyle.Flat;
-            inputNilaiButton.Location = new Point(55, 121);
-            inputNilaiButton.Margin = new Padding(2, 2, 2, 2);
+            inputNilaiButton.Location = new Point(79, 304);
             inputNilaiButton.Name = "inputNilaiButton";
-            inputNilaiButton.Size = new Size(227, 30);
+            inputNilaiButton.Size = new Size(324, 50);
             inputNilaiButton.TabIndex = 1;
             inputNilaiButton.Text = "Input Nilai";
             inputNilaiButton.UseVisualStyleBackColor = false;
@@ -68,10 +66,9 @@
             // 
             kelasButton.BackColor = Color.LightSkyBlue;
             kelasButton.FlatStyle = FlatStyle.Flat;
-            kelasButton.Location = new Point(55, 177);
-            kelasButton.Margin = new Padding(2, 2, 2, 2);
+            kelasButton.Location = new Point(79, 224);
             kelasButton.Name = "kelasButton";
-            kelasButton.Size = new Size(227, 30);
+            kelasButton.Size = new Size(324, 50);
             kelasButton.TabIndex = 2;
             kelasButton.Text = "Lihat Kelas";
             kelasButton.UseVisualStyleBackColor = false;
@@ -81,10 +78,9 @@
             // 
             button1.BackColor = Color.Crimson;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(55, 229);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Location = new Point(79, 382);
             button1.Name = "button1";
-            button1.Size = new Size(227, 30);
+            button1.Size = new Size(324, 50);
             button1.TabIndex = 3;
             button1.Text = "Log Out";
             button1.UseVisualStyleBackColor = false;
@@ -93,10 +89,9 @@
             // kelasPanel
             // 
             kelasPanel.BackColor = Color.Azure;
-            kelasPanel.Location = new Point(411, 84);
-            kelasPanel.Margin = new Padding(2, 2, 2, 2);
+            kelasPanel.Location = new Point(587, 140);
             kelasPanel.Name = "kelasPanel";
-            kelasPanel.Size = new Size(210, 205);
+            kelasPanel.Size = new Size(300, 342);
             kelasPanel.TabIndex = 4;
             kelasPanel.Paint += kelasPanel_Paint_1;
             // 
@@ -105,10 +100,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Azure;
-            label1.Location = new Point(420, 28);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(600, 47);
             label1.Name = "label1";
-            label1.Size = new Size(191, 42);
+            label1.Size = new Size(285, 63);
             label1.TabIndex = 5;
             label1.Text = "E-RAPORT";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -120,22 +114,22 @@
             panel1.Controls.Add(kelasButton);
             panel1.Controls.Add(inputNilaiButton);
             panel1.Controls.Add(welcomeLabel);
-            panel1.Location = new Point(-8, 0);
+            panel1.Location = new Point(-11, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(344, 387);
+            panel1.Size = new Size(491, 645);
             panel1.TabIndex = 6;
             // 
             // Home
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(683, 377);
+            ClientSize = new Size(976, 628);
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(kelasPanel);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
             Name = "Home";
             Text = "Home";
             Load += Home_Load;
