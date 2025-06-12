@@ -75,12 +75,14 @@ namespace E_Raport_SMA
         {
             InputNilai formNilai = new InputNilai(selectedNama, selectedNIS, selectedNilai, selectedMapel, selectedIdNilai, this.nipGuru, this.idKelas);
             formNilai.ShowDialog();
+            loadData();
         }
 
         private void backBtn_Click(object sender, EventArgs e)
         {
             Home home = new Home(this.nipGuru);
             this.Close();
+            home.Show();
         }
     }
 }
