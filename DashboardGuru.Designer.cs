@@ -35,11 +35,9 @@
             dataNilaiSiswa = new DataGridView();
             inputNilai = new Button();
             txtCari = new TextBox();
+            btnCari = new Button();
             backBtn = new Button();
             groupBox1 = new GroupBox();
-            filterCb = new ComboBox();
-            cariBtn = new Button();
-            clearBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -108,8 +106,20 @@
             txtCari.Margin = new Padding(4, 5, 4, 5);
             txtCari.Name = "txtCari";
             txtCari.PlaceholderText = "Cari Nama Siswa";
-            txtCari.Size = new Size(330, 31);
+            txtCari.Size = new Size(527, 31);
             txtCari.TabIndex = 3;
+            // 
+            // btnCari
+            // 
+            btnCari.BackColor = Color.Azure;
+            btnCari.FlatStyle = FlatStyle.System;
+            btnCari.Location = new Point(99, 110);
+            btnCari.Margin = new Padding(4, 5, 4, 5);
+            btnCari.Name = "btnCari";
+            btnCari.Size = new Size(84, 42);
+            btnCari.TabIndex = 4;
+            btnCari.Text = "Cari";
+            btnCari.UseVisualStyleBackColor = false;
             // 
             // backBtn
             // 
@@ -135,52 +145,15 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // filterCb
-            // 
-            filterCb.FormattingEnabled = true;
-            filterCb.Items.AddRange(new object[] { "Nama", "Mapel" });
-            filterCb.Location = new Point(100, 115);
-            filterCb.Name = "filterCb";
-            filterCb.Size = new Size(84, 33);
-            filterCb.TabIndex = 6;
-            // 
-            // cariBtn
-            // 
-            cariBtn.BackColor = Color.LightSkyBlue;
-            cariBtn.FlatStyle = FlatStyle.Flat;
-            cariBtn.Location = new Point(529, 114);
-            cariBtn.Margin = new Padding(4, 5, 4, 5);
-            cariBtn.Name = "cariBtn";
-            cariBtn.Size = new Size(93, 36);
-            cariBtn.TabIndex = 7;
-            cariBtn.Text = "Cari";
-            cariBtn.UseVisualStyleBackColor = false;
-            cariBtn.Click += cariBtn_Click;
-            // 
-            // clearBtn
-            // 
-            clearBtn.BackColor = Color.GhostWhite;
-            clearBtn.FlatStyle = FlatStyle.Flat;
-            clearBtn.Location = new Point(626, 114);
-            clearBtn.Margin = new Padding(4, 5, 4, 5);
-            clearBtn.Name = "clearBtn";
-            clearBtn.Size = new Size(93, 36);
-            clearBtn.TabIndex = 8;
-            clearBtn.Text = "Clear";
-            clearBtn.UseVisualStyleBackColor = false;
-            clearBtn.Click += clearBtn_Click;
-            // 
             // DashboardGuru
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(833, 590);
-            Controls.Add(clearBtn);
-            Controls.Add(cariBtn);
-            Controls.Add(filterCb);
             Controls.Add(groupBox1);
             Controls.Add(backBtn);
+            Controls.Add(btnCari);
             Controls.Add(txtCari);
             Controls.Add(inputNilai);
             Controls.Add(dataNilaiSiswa);
@@ -199,11 +172,9 @@
         private DataGridView dataNilaiSiswa;
         private Button inputNilai;
         private TextBox txtCari;
+        private Button btnCari;
         private Button backBtn;
         private Label label1;
         private GroupBox groupBox1;
-        private ComboBox filterCb;
-        private Button cariBtn;
-        private Button clearBtn;
     }
 }
