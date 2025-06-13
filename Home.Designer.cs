@@ -43,10 +43,10 @@
             // welcomeLabel
             // 
             welcomeLabel.AutoSize = true;
-            welcomeLabel.Font = new Font("Segoe UI", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            welcomeLabel.Font = new Font("Microsoft Sans Serif", 26F, FontStyle.Bold);
             welcomeLabel.Location = new Point(53, 67);
             welcomeLabel.Name = "welcomeLabel";
-            welcomeLabel.Size = new Size(417, 70);
+            welcomeLabel.Size = new Size(411, 59);
             welcomeLabel.TabIndex = 0;
             welcomeLabel.Text = "Selamat Datang";
             welcomeLabel.TextAlign = ContentAlignment.MiddleCenter;
