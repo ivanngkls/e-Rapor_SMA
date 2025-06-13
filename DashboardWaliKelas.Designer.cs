@@ -72,7 +72,6 @@
             btnLihatRapor.TabIndex = 4;
             btnLihatRapor.Text = "Lihat Rapor";
             btnLihatRapor.UseVisualStyleBackColor = false;
-            btnLihatRapor.Click += btnLihatRapor_Click;
             // 
             // addSiswa
             // 
@@ -126,7 +125,7 @@
             cariTxt.Margin = new Padding(4, 5, 4, 5);
             cariTxt.Name = "cariTxt";
             cariTxt.PlaceholderText = "Cari Nama Siswa";
-            cariTxt.Size = new Size(736, 31);
+            cariTxt.Size = new Size(721, 31);
             cariTxt.TabIndex = 3;
             // 
             // groupBox1
@@ -184,7 +183,7 @@
             dataSiswa.BorderStyle = BorderStyle.None;
             dataSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightSkyBlue;
+            dataGridViewCellStyle1.BackColor = Color.SteelBlue;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
