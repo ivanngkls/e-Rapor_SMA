@@ -33,7 +33,6 @@ namespace E_Raport_SMA
             inputNis.Text = nis;
             inpNilai.Text = nilai.ToString();
             inpMapel.Text = mapel.ToString();
-
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)
