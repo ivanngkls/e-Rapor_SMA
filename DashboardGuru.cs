@@ -85,6 +85,11 @@ namespace E_Raport_SMA
             home.Show();
         }
 
+        private void cariBtn_Click(object sender, EventArgs e)
+        {
+            tampilkanDataFiltered();
+        }
+
         private void tampilkanDataFiltered()
         {
             string kolom = filterCb.SelectedItem?.ToString();
@@ -123,11 +128,6 @@ namespace E_Raport_SMA
                 }
 
             }
-        }
-
-        private void cariBtn_Click(object sender, EventArgs e)
-        {
-            tampilkanDataFiltered();
         }
 
         private void clearBtn_Click(object sender, EventArgs e)

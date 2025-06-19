@@ -50,7 +50,6 @@
             label1.TabIndex = 0;
             label1.Text = "Login to\r\nE-Raport\r\n";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click_1;
             // 
             // NIPLabel
             // 
@@ -130,7 +129,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(396, 453);
             panel1.TabIndex = 6;
-            panel1.Paint += panel1_Paint;
             // 
             // Login
             // 
@@ -143,7 +141,6 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
             Text = "Login";
-            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
