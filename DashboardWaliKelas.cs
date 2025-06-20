@@ -1,18 +1,18 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Raport_SMA
+namespace E_Raport_SMA_Pemvis_Project
 {
-    public partial class DashboardWaliKelas : Form
+    public partial class DashboardWalikelas : Form
     {
         private string nip;
         private int selectedIdSiswa = -1;
@@ -20,7 +20,7 @@ namespace E_Raport_SMA
         int currentPage = 1;
         int totalPages = 1;
         int totalRecords = 0;
-        public DashboardWaliKelas(String nip)
+        public DashboardWalikelas(String nip)
         {
             InitializeComponent();
             this.nip = nip;
@@ -62,7 +62,7 @@ namespace E_Raport_SMA
 
                     int offset = (currentPage - 1) * pageSize;
 
-                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'nilai', s.id as 'id siswa' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
+                    string query = @"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'rata-rata', s.id as 'id siswa' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id GROUP BY s.id ORDER BY s.id DESC LIMIT @limit OFFSET @offset";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@limit", pageSize);
                     cmd.Parameters.AddWithValue("@id", idWaliKelas);
@@ -71,10 +71,10 @@ namespace E_Raport_SMA
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    dataSiswa.DataSource = dt;
-                    dataSiswa.Columns["id siswa"].Visible = false;
+                    dataGridViewSiswa.DataSource = dt;
+                    dataGridViewSiswa.Columns["id siswa"].Visible = false;
 
-                    pageInfoLabel.Text = $"Halaman {currentPage} dari {totalPages}";
+                    labelHalaman.Text = $"Halaman {currentPage} dari {totalPages}";
                 }
             }
             catch (Exception ex)
@@ -83,7 +83,7 @@ namespace E_Raport_SMA
             }
         }
 
-        private void prevBtn_Click(object sender, EventArgs e)
+        private void buttonPrev_Click(object sender, EventArgs e)
         {
             if (currentPage > 1)
             {
@@ -92,7 +92,7 @@ namespace E_Raport_SMA
             }
         }
 
-        private void nextBtn_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
             if (currentPage < totalPages)
             {
@@ -101,14 +101,23 @@ namespace E_Raport_SMA
             }
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void buttonKembali_Click(object sender, EventArgs e)
         {
-            Home home = new Home(this.nip);
+            Beranda home = new Beranda(this.nip);
             this.Hide();
             home.Show();
         }
 
-        private void addSiswa_Click(object sender, EventArgs e)
+        private void dataGridViewSiswa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewSiswa.Rows[e.RowIndex];
+                selectedIdSiswa = Convert.ToInt32(row.Cells["id siswa"].Value);
+            }
+        }
+
+        private void buttonTambahSiswa_Click(object sender, EventArgs e)
         {
             try
             {
@@ -120,7 +129,7 @@ namespace E_Raport_SMA
                     getIdCmd.Parameters.AddWithValue("@nip", this.nip);
                     object result = getIdCmd.ExecuteScalar();
                     int idWaliKelas = Convert.ToInt32(result);
-                    addSiswa siswa = new addSiswa(idWaliKelas, this.nip);
+                    TambahSiswa siswa = new TambahSiswa(idWaliKelas, this.nip);
                     siswa.ShowDialog();
                     Load_DataSiswa();
                 }
@@ -131,15 +140,7 @@ namespace E_Raport_SMA
             }
         }
 
-        private void dataSiswa_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataSiswa.Rows[e.RowIndex];
-                selectedIdSiswa = Convert.ToInt32(row.Cells["id siswa"].Value);
-            }
-        }
-        private void deleteBtn_Click(object sender, EventArgs e)
+        private void buttonHapus_Click(object sender, EventArgs e)
         {
             if (selectedIdSiswa == -1) return;
             DialogResult result = MessageBox.Show("Apakah Kamu Yakin menghapus siswa ini dari kelas Anda?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -163,10 +164,74 @@ namespace E_Raport_SMA
             }
         }
 
-        private void btnLihatRapor_Click(object sender, EventArgs e)
+        private void buttonLihatRapor_Click(object sender, EventArgs e)
         {
-            CetakRapor raport = new CetakRapor(this.selectedIdSiswa);
-            raport.ShowDialog();
+            CetakRaport rapor = new CetakRaport(this.selectedIdSiswa, this.nip);
+            rapor.Show();
+            this.Hide();
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            EditSiswa edit = new EditSiswa(this.selectedIdSiswa, this.nip);
+            edit.ShowDialog();
+            Load_DataSiswa();
+        }
+
+        private void tampilkanDataFiltered()
+        {
+            string kolom = comboBoxFilter.SelectedItem?.ToString();
+            string keyword = textBoxCari.Text.Trim();
+            string kolomDb = "s.nama";
+            if (string.IsNullOrEmpty(kolom)) kolomDb = "s.nama";
+            if (kolom == "Alamat") kolomDb = "s.alamat";
+
+            using (MySqlConnection connection = new MySqlConnection(DBConfig.connStr))
+            {
+                try
+                {
+                    connection.Open();
+                    string getIdQuery = @"
+                                        SELECT wk.id 
+                                        FROM walikelas wk
+                                        JOIN guru g ON g.id = wk.id_guru
+                                        WHERE g.nip = @nip";
+                    MySqlCommand getIdCmd = new MySqlCommand(getIdQuery, connection);
+                    getIdCmd.Parameters.AddWithValue("@nip", this.nip);
+                    object result = getIdCmd.ExecuteScalar();
+                    int idWaliKelas = Convert.ToInt32(result);
+
+                    string countQuery = "SELECT COUNT(*) FROM siswa WHERE id_walikelas = @id";
+                    MySqlCommand countCmd = new MySqlCommand(countQuery, connection);
+                    countCmd.Parameters.AddWithValue("@id", idWaliKelas);
+                    totalRecords = Convert.ToInt32(countCmd.ExecuteScalar());
+
+                    string query = $@"SELECT s.nis, s.nama, s.alamat, ROUND(AVG(n.nilai_angka), 2) as 'rata-rata', s.id as 'id siswa' FROM siswa s LEFT JOIN raport r ON s.id = r.id_siswa LEFT JOIN nilai n ON n.id_raport = r.id WHERE s.id_walikelas = @id AND {kolomDb} LIKE @keyword GROUP BY s.id ORDER BY s.id";
+                    ;
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                    cmd.Parameters.AddWithValue("@id", idWaliKelas);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridViewSiswa.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error saat filter data: " + ex.Message);
+                }
+            }
+        }
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxCari.Clear();
+        }
+
+        private void buttonCari_Click(object sender, EventArgs e)
+        {
+            tampilkanDataFiltered();
         }
     }
 }

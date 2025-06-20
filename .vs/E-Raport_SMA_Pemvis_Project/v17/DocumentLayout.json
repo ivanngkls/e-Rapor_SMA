@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\dashboardguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:dashboardguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\crystalreport1.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:crystalreport1.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\cetakraport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:cetakraport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\beranda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:beranda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\raport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:raport.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\raport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:raport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\tambahsiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\tambahsiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:tambahsiswa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\cetakraport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:cetakraport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\dashboardwalikelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:dashboardwalikelas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\dashboardguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:dashboardguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|d:\\belajar pemrograman\\c#\\e-raport_sma_pemvis_project\\beranda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|solutionrelative:beranda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}|E-Raport_SMA_Pemvis_Project.csproj|D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\dashboardguru.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "DashboardWalikelas.cs [Design]",
               "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\DashboardWalikelas.cs",
               "RelativeDocumentMoniker": "DashboardWalikelas.cs",
@@ -54,12 +62,11 @@
               "RelativeToolTip": "DashboardWalikelas.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-15T22:58:16.8Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DashboardGuru.cs",
               "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\DashboardGuru.cs",
               "RelativeDocumentMoniker": "DashboardGuru.cs",
@@ -73,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "DashboardGuru.cs [Design]",
               "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\DashboardGuru.cs",
               "RelativeDocumentMoniker": "DashboardGuru.cs",
@@ -86,51 +93,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Raport.cs [Design]",
-              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.cs",
-              "RelativeDocumentMoniker": "Raport.cs",
-              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.cs [Design]",
-              "RelativeToolTip": "Raport.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:56:53.062Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TambahSiswa.cs [Design]",
-              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\TambahSiswa.cs",
-              "RelativeDocumentMoniker": "TambahSiswa.cs",
-              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\TambahSiswa.cs [Design]",
-              "RelativeToolTip": "TambahSiswa.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:56:51.427Z",
-              "EditorCaption": " [Design]"
+              "Title": "CrystalReport1.rpt",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CrystalReport1.rpt",
+              "RelativeDocumentMoniker": "CrystalReport1.rpt",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CrystalReport1.rpt",
+              "RelativeToolTip": "CrystalReport1.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVEhLtVVNTBx1FP/N98eyM/uBsLRACU0k0BYWsXw1xhAPHjQqpmptm/TQ2IMnDQcTTzXGmp5MqpFqNGkPjdWoSSvGxlStAYvaAlVLe1iIfC/QAmXZXZbdmR3fzE5QYKFe\u002Bpt5M29m3tf/vf97gwcKy7IYl11FadmOyt176hvdxy2RtbLZWzf/6psY/3vYfXV/tO8/eDR6J5ZdiCXvS5Mz94yPz14YUD0Fuqu\u002BAax7XwOPIkIvkPOS5pHh9UjwqhLxEhuuC9d98c3VOUEUZVd9DfI62AyUUtiHcxLPciwCfgWhQp398NOvrm8vrXjYFV3F/3ZgZcmqw5ALIvuRZRj4NBWF/gI01NdVHz9x6rwgiFJOMIf7OiBbyJK1LIXt3B2iJyIbHkWARqkrDBQwDQ314a8vXYs7H1xs6sA27JB7OKcd/eo3C4ZhIraUQsYwIPIcykM\u002BMAzD5SzksIWDXCrs1FgUrJ0SmwaTt9A50YmEkQTDslAVCYosQCby0kpYdu3OZ2V9e7GslWiSN8S77xzk8mwT8W5aFo1FXEx8Sw4\u002Bwsmhk4inl2DSezttdspsnfXgT3zSfeaP4aWRkemle8PdpyOekkdqDNPOuLsKip6umDXuoj/Th218CVTI\u002BGDifSTMJF4v70BQDJKsLbcR3KGXX5x8oqE43FoTOKKUNLcNxUJNv/wZFZPLKwgFyJTEUuQx9KZ/g8LJCHB\u002B9Mz2YHplGoOJm0gay2jW9oGzWAgCj5HJOZw70/mWax9cdW3rTCJl9prpxOWm6oJAVZlWGZnl5B8G7uK7q2OYTcyhr6gLFmMgyAfhZT34OXoFE7EJmBkTAwv9yBoWmv2tkEQeo\u002BsddP940TCNTFxU9el4Cj0BDyO1VOutgqhgfIHH4NQMhlM9GBP6McwM4zZzG4PXBjF3Yw7WUBbKqIxdehgNRXvhoe4em5pf48DZRd93fYZT73ak3nnz6FRqxYiUF6t4sk7CvhoNIlOO5d\u002BfQjQiYyQzgiEjgoXoPDCehTAl4KWyI3gm9AKWl9N5i7y6TZdiC5ieHLU\u002BP/ueqVN3FtEIqK9gEdQUiGwl2Ov7Yc0Wg6EBbKUsCGkB7eEDeL7xIHSvBkkS7B5wrf2LvH3A04xRabllhTwtmwMrqBDMKqQvt8OIBqFaKg41HsPhx16BX9Ph99FKRSHvLsrrwI6Eo4aRRBaaTPuU5cEpPoiJOjAXDuPV8Bt47tEDZNwHn88LUbCNU/R5PGzayXbzxCkV0UVS5UUoHgVFRTpqy6rxeEUbzR4/fLptXKQ5RfJO72xRg//CLtZyykBvxEDcVODXPdgZklFVquDZJorar1HkOqWFjJNsbhjaio76GmxwYEeRpv3ddWMFv04EULHtIbRUKairoKI2sNgZzNJg46lOXK7LbbI73iTK42C17Mdee5vZU9\u002BqFu7YdTzLKR1pUwD9uFBApPJpaOIKAl7OmZpUJFdrI/oHx/B0W\u002B1q4OsctCj089hLE3E3Fdr5RnyGUpBKrWTSX547bS3M33Hkt0L3T5fOu\u002ByDBvAPpv4NXXCfjRcAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-06-20T00:20:40.862Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CetakRaport.cs [Design]",
-              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CetakRaport.cs",
-              "RelativeDocumentMoniker": "CetakRaport.cs",
-              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CetakRaport.cs [Design]",
-              "RelativeToolTip": "CetakRaport.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "Raport.Designer.cs",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.Designer.cs",
+              "RelativeDocumentMoniker": "Raport.Designer.cs",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.Designer.cs",
+              "RelativeToolTip": "Raport.Designer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAIAwwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:56:07.591Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Beranda.cs [Design]",
-              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Beranda.cs",
-              "RelativeDocumentMoniker": "Beranda.cs",
-              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Beranda.cs [Design]",
-              "RelativeToolTip": "Beranda.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T23:56:05.34Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-20T00:20:31.969Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -146,7 +130,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "Raport.cs [Design]",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.cs",
+              "RelativeDocumentMoniker": "Raport.cs",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Raport.cs [Design]",
+              "RelativeToolTip": "Raport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:56:53.062Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TambahSiswa.cs [Design]",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\TambahSiswa.cs",
+              "RelativeDocumentMoniker": "TambahSiswa.cs",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\TambahSiswa.cs [Design]",
+              "RelativeToolTip": "TambahSiswa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:56:51.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CetakRaport.cs [Design]",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CetakRaport.cs",
+              "RelativeDocumentMoniker": "CetakRaport.cs",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\CetakRaport.cs [Design]",
+              "RelativeToolTip": "CetakRaport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:56:07.591Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Beranda.cs [Design]",
+              "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Beranda.cs",
+              "RelativeDocumentMoniker": "Beranda.cs",
+              "ToolTip": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\Beranda.cs [Design]",
+              "RelativeToolTip": "Beranda.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T23:56:05.34Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "DashboardWalikelas.cs",
               "DocumentMoniker": "D:\\Belajar pemrograman\\C#\\E-Raport_SMA_Pemvis_Project\\DashboardWalikelas.cs",
               "RelativeDocumentMoniker": "DashboardWalikelas.cs",
@@ -154,8 +185,7 @@
               "RelativeToolTip": "DashboardWalikelas.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAYwN0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T22:58:19.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T22:58:19.106Z"
             }
           ]
         }
