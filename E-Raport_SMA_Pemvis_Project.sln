@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Raport_SMA_Pemvis_Project", "E-Raport_SMA_Pemvis_Project.csproj", "{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Raport_SMA", "C:\Users\lenovo\source\repos\e-Rapor_SMA\E-Raport_SMA.csproj", "{B196977E-EF81-120C-1208-145F9B40B2EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67A6BA2-86FA-4AAE-A94E-0E43C437EBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B196977E-EF81-120C-1208-145F9B40B2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B196977E-EF81-120C-1208-145F9B40B2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B196977E-EF81-120C-1208-145F9B40B2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B196977E-EF81-120C-1208-145F9B40B2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F33DBE98-FA9F-4E26-873B-00C9D6F62BBB}
+	EndGlobalSection
+EndGlobal
