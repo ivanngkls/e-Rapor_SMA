@@ -1,4 +1,4 @@
-﻿namespace E_Raport_SMA
+﻿namespace E_Raport_SMA_Pemvis_Project
 {
     partial class DashboardGuru
     {
@@ -28,182 +28,226 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardGuru));
-            label1 = new Label();
-            dataNilaiSiswa = new DataGridView();
-            inputNilai = new Button();
-            txtCari = new TextBox();
-            backBtn = new Button();
-            groupBox1 = new GroupBox();
-            filterCb = new ComboBox();
-            cariBtn = new Button();
-            clearBtn = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).BeginInit();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.groupBoxJudul = new System.Windows.Forms.GroupBox();
+            this.labelNilai = new System.Windows.Forms.Label();
+            this.buttonCari = new System.Windows.Forms.Button();
+            this.textBoxCari = new System.Windows.Forms.TextBox();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.dataGridViewNilai = new System.Windows.Forms.DataGridView();
+            this.buttonKembali = new System.Windows.Forms.Button();
+            this.buttonInputNilai = new System.Windows.Forms.Button();
+            this.labelHalaman = new System.Windows.Forms.Label();
+            this.buttonNext = new System.Windows.Forms.Button();
+            this.buttonPrev = new System.Windows.Forms.Button();
+            this.groupBoxJudul.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNilai)).BeginInit();
+            this.SuspendLayout();
             // 
-            // label1
+            // groupBoxJudul
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(183, 12);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(261, 45);
-            label1.TabIndex = 0;
-            label1.Text = "Data Nilai Siswa";
+            this.groupBoxJudul.Controls.Add(this.labelNilai);
+            this.groupBoxJudul.Location = new System.Drawing.Point(104, 23);
+            this.groupBoxJudul.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxJudul.Name = "groupBoxJudul";
+            this.groupBoxJudul.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBoxJudul.Size = new System.Drawing.Size(651, 69);
+            this.groupBoxJudul.TabIndex = 0;
+            this.groupBoxJudul.TabStop = false;
             // 
-            // dataNilaiSiswa
+            // labelNilai
             // 
-            dataNilaiSiswa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataNilaiSiswa.BackgroundColor = Color.White;
-            dataNilaiSiswa.BorderStyle = BorderStyle.None;
-            dataNilaiSiswa.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightSkyBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.CadetBlue;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataNilaiSiswa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataNilaiSiswa.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.CadetBlue;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataNilaiSiswa.DefaultCellStyle = dataGridViewCellStyle2;
-            dataNilaiSiswa.EnableHeadersVisualStyles = false;
-            dataNilaiSiswa.Location = new Point(99, 158);
-            dataNilaiSiswa.Margin = new Padding(4, 5, 4, 5);
-            dataNilaiSiswa.Name = "dataNilaiSiswa";
-            dataNilaiSiswa.ReadOnly = true;
-            dataNilaiSiswa.RowHeadersVisible = false;
-            dataNilaiSiswa.RowHeadersWidth = 62;
-            dataNilaiSiswa.Size = new Size(620, 365);
-            dataNilaiSiswa.TabIndex = 1;
-            dataNilaiSiswa.CellClick += dataNilaiSiswa_CellClick;
+            this.labelNilai.AutoSize = true;
+            this.labelNilai.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.labelNilai.Location = new System.Drawing.Point(192, 11);
+            this.labelNilai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNilai.Name = "labelNilai";
+            this.labelNilai.Size = new System.Drawing.Size(261, 45);
+            this.labelNilai.TabIndex = 1;
+            this.labelNilai.Text = "Data Nilai Siswa";
             // 
-            // inputNilai
+            // buttonCari
             // 
-            inputNilai.BackColor = Color.LightSkyBlue;
-            inputNilai.FlatStyle = FlatStyle.Flat;
-            inputNilai.Location = new Point(461, 533);
-            inputNilai.Margin = new Padding(4, 5, 4, 5);
-            inputNilai.Name = "inputNilai";
-            inputNilai.Size = new Size(120, 42);
-            inputNilai.TabIndex = 2;
-            inputNilai.Text = "Input Nilai";
-            inputNilai.UseVisualStyleBackColor = false;
-            inputNilai.Click += inputNilai_Click;
+            this.buttonCari.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCari.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCari.Location = new System.Drawing.Point(558, 102);
+            this.buttonCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonCari.Name = "buttonCari";
+            this.buttonCari.Size = new System.Drawing.Size(90, 48);
+            this.buttonCari.TabIndex = 2;
+            this.buttonCari.Text = "Cari";
+            this.buttonCari.UseVisualStyleBackColor = false;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
-            // txtCari
+            // textBoxCari
             // 
-            txtCari.Location = new Point(191, 117);
-            txtCari.Margin = new Padding(4, 5, 4, 5);
-            txtCari.Name = "txtCari";
-            txtCari.PlaceholderText = "Cari Nama Siswa";
-            txtCari.Size = new Size(330, 31);
-            txtCari.TabIndex = 3;
+            this.textBoxCari.Location = new System.Drawing.Point(201, 114);
+            this.textBoxCari.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxCari.Name = "textBoxCari";
+            this.textBoxCari.Size = new System.Drawing.Size(346, 26);
+            this.textBoxCari.TabIndex = 3;
             // 
-            // backBtn
+            // comboBoxFilter
             // 
-            backBtn.BackColor = Color.LightSlateGray;
-            backBtn.FlatStyle = FlatStyle.Flat;
-            backBtn.Location = new Point(589, 533);
-            backBtn.Margin = new Padding(4, 5, 4, 5);
-            backBtn.Name = "backBtn";
-            backBtn.Size = new Size(120, 42);
-            backBtn.TabIndex = 5;
-            backBtn.Text = "Kembali";
-            backBtn.UseVisualStyleBackColor = false;
-            backBtn.Click += backBtn_Click;
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Items.AddRange(new object[] {
+            "Nama",
+            "Mapel"});
+            this.comboBoxFilter.Location = new System.Drawing.Point(105, 112);
+            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(88, 28);
+            this.comboBoxFilter.TabIndex = 4;
             // 
-            // groupBox1
+            // buttonClear
             // 
-            groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(99, 25);
-            groupBox1.Margin = new Padding(4, 5, 4, 5);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4, 5, 4, 5);
-            groupBox1.Size = new Size(620, 75);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
+            this.buttonClear.BackColor = System.Drawing.Color.Azure;
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClear.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Location = new System.Drawing.Point(664, 102);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(90, 48);
+            this.buttonClear.TabIndex = 0;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // filterCb
+            // dataGridViewNilai
             // 
-            filterCb.FormattingEnabled = true;
-            filterCb.Items.AddRange(new object[] { "Nama", "Mapel" });
-            filterCb.Location = new Point(100, 115);
-            filterCb.Name = "filterCb";
-            filterCb.Size = new Size(84, 33);
-            filterCb.TabIndex = 6;
+            this.dataGridViewNilai.AllowUserToOrderColumns = true;
+            this.dataGridViewNilai.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Aqua;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewNilai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewNilai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewNilai.Location = new System.Drawing.Point(105, 158);
+            this.dataGridViewNilai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewNilai.Name = "dataGridViewNilai";
+            this.dataGridViewNilai.ReadOnly = true;
+            this.dataGridViewNilai.RowHeadersWidth = 62;
+            this.dataGridViewNilai.Size = new System.Drawing.Size(650, 279);
+            this.dataGridViewNilai.TabIndex = 5;
+            this.dataGridViewNilai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewNilai_CellClick);
             // 
-            // cariBtn
+            // buttonKembali
             // 
-            cariBtn.BackColor = Color.LightSkyBlue;
-            cariBtn.FlatStyle = FlatStyle.Flat;
-            cariBtn.Location = new Point(529, 114);
-            cariBtn.Margin = new Padding(4, 5, 4, 5);
-            cariBtn.Name = "cariBtn";
-            cariBtn.Size = new Size(93, 36);
-            cariBtn.TabIndex = 7;
-            cariBtn.Text = "Cari";
-            cariBtn.UseVisualStyleBackColor = false;
-            cariBtn.Click += cariBtn_Click;
+            this.buttonKembali.BackColor = System.Drawing.Color.CadetBlue;
+            this.buttonKembali.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKembali.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonKembali.Location = new System.Drawing.Point(633, 480);
+            this.buttonKembali.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonKembali.Name = "buttonKembali";
+            this.buttonKembali.Size = new System.Drawing.Size(122, 46);
+            this.buttonKembali.TabIndex = 6;
+            this.buttonKembali.Text = "Kembali";
+            this.buttonKembali.UseVisualStyleBackColor = false;
+            this.buttonKembali.Click += new System.EventHandler(this.buttonKembali_Click);
             // 
-            // clearBtn
+            // buttonInputNilai
             // 
-            clearBtn.BackColor = Color.GhostWhite;
-            clearBtn.FlatStyle = FlatStyle.Flat;
-            clearBtn.Location = new Point(626, 114);
-            clearBtn.Margin = new Padding(4, 5, 4, 5);
-            clearBtn.Name = "clearBtn";
-            clearBtn.Size = new Size(93, 36);
-            clearBtn.TabIndex = 8;
-            clearBtn.Text = "Clear";
-            clearBtn.UseVisualStyleBackColor = false;
-            clearBtn.Click += clearBtn_Click;
+            this.buttonInputNilai.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonInputNilai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInputNilai.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInputNilai.Location = new System.Drawing.Point(507, 480);
+            this.buttonInputNilai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonInputNilai.Name = "buttonInputNilai";
+            this.buttonInputNilai.Size = new System.Drawing.Size(117, 46);
+            this.buttonInputNilai.TabIndex = 7;
+            this.buttonInputNilai.Text = "Input Nilai";
+            this.buttonInputNilai.UseVisualStyleBackColor = false;
+            this.buttonInputNilai.Click += new System.EventHandler(this.buttonInputNilai_Click);
+            // 
+            // labelHalaman
+            // 
+            this.labelHalaman.AutoSize = true;
+            this.labelHalaman.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.labelHalaman.Location = new System.Drawing.Point(598, 442);
+            this.labelHalaman.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHalaman.Name = "labelHalaman";
+            this.labelHalaman.Size = new System.Drawing.Size(82, 25);
+            this.labelHalaman.TabIndex = 10;
+            this.labelHalaman.Text = "Halaman";
+            // 
+            // buttonNext
+            // 
+            this.buttonNext.BackColor = System.Drawing.Color.Azure;
+            this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNext.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNext.Location = new System.Drawing.Point(202, 447);
+            this.buttonNext.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(89, 38);
+            this.buttonNext.TabIndex = 12;
+            this.buttonNext.Text = "Next>";
+            this.buttonNext.UseVisualStyleBackColor = false;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
+            // buttonPrev
+            // 
+            this.buttonPrev.BackColor = System.Drawing.Color.Azure;
+            this.buttonPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPrev.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrev.Location = new System.Drawing.Point(105, 447);
+            this.buttonPrev.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(89, 38);
+            this.buttonPrev.TabIndex = 11;
+            this.buttonPrev.Text = "<Prev";
+            this.buttonPrev.UseVisualStyleBackColor = false;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
             // DashboardGuru
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(833, 590);
-            Controls.Add(clearBtn);
-            Controls.Add(cariBtn);
-            Controls.Add(filterCb);
-            Controls.Add(groupBox1);
-            Controls.Add(backBtn);
-            Controls.Add(txtCari);
-            Controls.Add(inputNilai);
-            Controls.Add(dataNilaiSiswa);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "DashboardGuru";
-            Text = "Dashboard Guru";
-            ((System.ComponentModel.ISupportInitialize)dataNilaiSiswa).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(874, 545);
+            this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.buttonPrev);
+            this.Controls.Add(this.labelHalaman);
+            this.Controls.Add(this.buttonKembali);
+            this.Controls.Add(this.buttonInputNilai);
+            this.Controls.Add(this.dataGridViewNilai);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.comboBoxFilter);
+            this.Controls.Add(this.textBoxCari);
+            this.Controls.Add(this.buttonCari);
+            this.Controls.Add(this.groupBoxJudul);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "DashboardGuru";
+            this.Text = "Dashboard Guru";
+            this.groupBoxJudul.ResumeLayout(false);
+            this.groupBoxJudul.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNilai)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-        private DataGridView dataNilaiSiswa;
-        private Button inputNilai;
-        private TextBox txtCari;
-        private Button backBtn;
-        private Label label1;
-        private GroupBox groupBox1;
-        private ComboBox filterCb;
-        private Button cariBtn;
-        private Button clearBtn;
+
+        private System.Windows.Forms.GroupBox groupBoxJudul;
+        private System.Windows.Forms.Label labelNilai;
+        private System.Windows.Forms.Button buttonCari;
+        private System.Windows.Forms.TextBox textBoxCari;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.DataGridView dataGridViewNilai;
+        private System.Windows.Forms.Button buttonKembali;
+        private System.Windows.Forms.Button buttonInputNilai;
+        private System.Windows.Forms.Label labelHalaman;
+        private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Button buttonPrev;
     }
 }

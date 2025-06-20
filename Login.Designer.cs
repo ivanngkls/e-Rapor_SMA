@@ -1,14 +1,14 @@
-﻿namespace E_Raport_SMA
+﻿namespace E_Raport_SMA_Pemvis_Project
 {
     partial class Login
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,137 +23,122 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            label1 = new Label();
-            NIPLabel = new Label();
-            label3 = new Label();
-            txtNIP = new TextBox();
-            txtPassword = new TextBox();
-            btnLogin = new Button();
-            panel1 = new Panel();
-            panel1.SuspendLayout();
-            SuspendLayout();
+            this.panelLogin = new System.Windows.Forms.Panel();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxNIP = new System.Windows.Forms.TextBox();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelNIP = new System.Windows.Forms.Label();
+            this.labelSelamatDatang = new System.Windows.Forms.Label();
+            this.buttonMasuk = new System.Windows.Forms.Button();
+            this.panelLogin.SuspendLayout();
+            this.SuspendLayout();
             // 
-            // label1
+            // panelLogin
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(106, 25);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(190, 108);
-            label1.TabIndex = 0;
-            label1.Text = "Login to\r\nE-Raport\r\n";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            this.panelLogin.BackColor = System.Drawing.Color.Azure;
+            this.panelLogin.Controls.Add(this.textBoxPassword);
+            this.panelLogin.Controls.Add(this.textBoxNIP);
+            this.panelLogin.Controls.Add(this.labelPassword);
+            this.panelLogin.Controls.Add(this.labelNIP);
+            this.panelLogin.Controls.Add(this.labelSelamatDatang);
+            this.panelLogin.Controls.Add(this.buttonMasuk);
+            this.panelLogin.Location = new System.Drawing.Point(188, 49);
+            this.panelLogin.Name = "panelLogin";
+            this.panelLogin.Size = new System.Drawing.Size(396, 452);
+            this.panelLogin.TabIndex = 1;
             // 
-            // NIPLabel
+            // textBoxPassword
             // 
-            NIPLabel.AutoSize = true;
-            NIPLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            NIPLabel.Location = new Point(29, 195);
-            NIPLabel.Margin = new Padding(4, 0, 4, 0);
-            NIPLabel.Name = "NIPLabel";
-            NIPLabel.Size = new Size(53, 31);
-            NIPLabel.TabIndex = 1;
-            NIPLabel.Text = "NIP";
+            this.textBoxPassword.Location = new System.Drawing.Point(147, 258);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(210, 26);
+            this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.UseSystemPasswordChar = true;
             // 
-            // label3
+            // textBoxNIP
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(29, 253);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(114, 31);
-            label3.TabIndex = 2;
-            label3.Text = "Password";
+            this.textBoxNIP.Location = new System.Drawing.Point(147, 208);
+            this.textBoxNIP.Name = "textBoxNIP";
+            this.textBoxNIP.Size = new System.Drawing.Size(210, 26);
+            this.textBoxNIP.TabIndex = 6;
             // 
-            // txtNIP
+            // labelPassword
             // 
-            txtNIP.BackColor = SystemColors.HighlightText;
-            txtNIP.Font = new Font("Segoe UI", 10F);
-            txtNIP.Location = new Point(147, 187);
-            txtNIP.Margin = new Padding(4, 5, 4, 5);
-            txtNIP.Name = "txtNIP";
-            txtNIP.PlaceholderText = "Masukkan NIP";
-            txtNIP.Size = new Size(210, 34);
-            txtNIP.TabIndex = 3;
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.labelPassword.Location = new System.Drawing.Point(27, 262);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(92, 25);
+            this.labelPassword.TabIndex = 0;
+            this.labelPassword.Text = "Password";
+            this.labelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtPassword
+            // labelNIP
             // 
-            txtPassword.BackColor = SystemColors.HighlightText;
-            txtPassword.Font = new Font("Segoe UI", 10F);
-            txtPassword.Location = new Point(147, 248);
-            txtPassword.Margin = new Padding(4, 5, 4, 5);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderText = "Masukkan Password";
-            txtPassword.Size = new Size(210, 34);
-            txtPassword.TabIndex = 4;
-            txtPassword.UseSystemPasswordChar = true;
+            this.labelNIP.AutoSize = true;
+            this.labelNIP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.labelNIP.Location = new System.Drawing.Point(27, 211);
+            this.labelNIP.Name = "labelNIP";
+            this.labelNIP.Size = new System.Drawing.Size(43, 25);
+            this.labelNIP.TabIndex = 4;
+            this.labelNIP.Text = "NIP";
+            this.labelNIP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnLogin
+            // labelSelamatDatang
             // 
-            btnLogin.BackColor = Color.LightSkyBlue;
-            btnLogin.BackgroundImageLayout = ImageLayout.Center;
-            btnLogin.CausesValidation = false;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = SystemColors.ControlText;
-            btnLogin.Location = new Point(29, 358);
-            btnLogin.Margin = new Padding(4, 5, 4, 5);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(330, 47);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = false;
-            btnLogin.Click += btnLogin_Click;
+            this.labelSelamatDatang.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.labelSelamatDatang.Location = new System.Drawing.Point(76, 26);
+            this.labelSelamatDatang.Name = "labelSelamatDatang";
+            this.labelSelamatDatang.Size = new System.Drawing.Size(249, 142);
+            this.labelSelamatDatang.TabIndex = 2;
+            this.labelSelamatDatang.Text = "Login to E-Raport";
+            this.labelSelamatDatang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // buttonMasuk
             // 
-            panel1.AllowDrop = true;
-            panel1.BackColor = Color.Azure;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(btnLogin);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(NIPLabel);
-            panel1.Controls.Add(txtPassword);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(txtNIP);
-            panel1.Location = new Point(179, 62);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(396, 453);
-            panel1.TabIndex = 6;
+            this.buttonMasuk.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.buttonMasuk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMasuk.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMasuk.Location = new System.Drawing.Point(32, 355);
+            this.buttonMasuk.Name = "buttonMasuk";
+            this.buttonMasuk.Size = new System.Drawing.Size(324, 49);
+            this.buttonMasuk.TabIndex = 3;
+            this.buttonMasuk.Text = "Login";
+            this.buttonMasuk.UseVisualStyleBackColor = false;
+            this.buttonMasuk.Click += new System.EventHandler(this.buttonMasuk_Click);
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(751, 595);
-            Controls.Add(panel1);
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "Login";
-            Text = "Login";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(789, 549);
+            this.Controls.Add(this.panelLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
+            this.panelLogin.ResumeLayout(false);
+            this.panelLogin.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private Label label1;
-        private Label NIPLabel;
-        private Label label3;
-        private TextBox txtNIP;
-        private TextBox txtPassword;
-        private Button btnLogin;
-        private Panel panel1;
+        private System.Windows.Forms.Panel panelLogin;
+        private System.Windows.Forms.Button buttonMasuk;
+        private System.Windows.Forms.Label labelSelamatDatang;
+        private System.Windows.Forms.Label labelNIP;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.TextBox textBoxNIP;
+        private System.Windows.Forms.TextBox textBoxPassword;
     }
 }

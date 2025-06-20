@@ -1,6 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace E_Raport_SMA
+namespace E_Raport_SMA_Pemvis_Project
 {
     public partial class Login : Form
     {
@@ -9,10 +18,10 @@ namespace E_Raport_SMA
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void buttonMasuk_Click(object sender, EventArgs e)
         {
-            string nip = txtNIP.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string nip = textBoxNIP.Text.Trim();
+            string password = textBoxPassword.Text.Trim();
 
             if (string.IsNullOrEmpty(nip) || string.IsNullOrEmpty(password))
             {
@@ -39,7 +48,7 @@ namespace E_Raport_SMA
                         if (isValid)
                         {
                             MessageBox.Show("Login Berhasil", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Home home = new Home(nip);
+                            Beranda home = new Beranda(nip);
                             this.Hide();
                             home.Show();
                         }

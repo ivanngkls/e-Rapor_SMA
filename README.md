@@ -1,1 +1,2 @@
-# E-Raport_SMA
+# e-Rapor_SMA
+Sistem e-rapor SMA

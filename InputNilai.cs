@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace E_Raport_SMA
+namespace E_Raport_SMA_Pemvis_Project
 {
     public partial class InputNilai : Form
     {
@@ -28,14 +28,15 @@ namespace E_Raport_SMA
 
         private void loadData(string nama, string nis, double nilai, string mapel)
         {
-            inpNilai.Focus();
-            inputNama.Text = nama;
-            inputNis.Text = nis;
-            inpNilai.Text = nilai.ToString();
-            inpMapel.Text = mapel.ToString();
+            textBoxNilai.Focus();
+            textBoxNama.Text = nama;
+            textBoxNIS.Text = nis;
+            textBoxNilai.Text = nilai.ToString();
+            textBoxMapel.Text = mapel;
+
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void buttonSimpan_Click(object sender, EventArgs e)
         {
             if (!validasiNilai()) return;
             using (MySqlConnection conn = new MySqlConnection(DBConfig.connStr))
@@ -44,7 +45,7 @@ namespace E_Raport_SMA
                 string query = "UPDATE nilai SET nilai_angka = @nilai WHERE id=@id";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("id", this.idNilai);
-                cmd.Parameters.AddWithValue("nilai", inpNilai.Text);
+                cmd.Parameters.AddWithValue("nilai", textBoxNilai.Text);
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Data berhasil di update", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -54,19 +55,24 @@ namespace E_Raport_SMA
 
         private bool validasiNilai()
         {
-            if (string.IsNullOrWhiteSpace(inpNilai.Text))
+            if (string.IsNullOrWhiteSpace(textBoxNilai.Text))
             {
                 MessageBox.Show("Nilai wajib diisi", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                inpNilai.Focus();
+                textBoxNilai.Focus();
                 return false;
             }
-            if(!int.TryParse(inpNilai.Text, out int nilai) || nilai > 100)
+            if (!int.TryParse(textBoxNilai.Text, out int nilai) || nilai > 100)
             {
                 MessageBox.Show("Nilai harus kurang dari 100", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                inpNilai.Focus();
+                textBoxNilai.Focus();
                 return false;
             }
             return true;
+        }
+
+        private void buttonKembali_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
