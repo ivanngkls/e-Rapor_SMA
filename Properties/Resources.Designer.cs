@@ -67,5 +67,15 @@ namespace E_Raport_SMA_Pemvis_Project.Properties
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap raport {
+            get {
+                object obj = ResourceManager.GetObject("raport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

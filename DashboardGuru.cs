@@ -1,6 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace E_Raport_SMA_Pemvis_Project
@@ -35,6 +41,7 @@ namespace E_Raport_SMA_Pemvis_Project
                     string IdGuruQuery = "SELECT id FROM guru WHERE nip = @nip";
                     MySqlCommand IdGuruCmd = new MySqlCommand(IdGuruQuery, conn);
                     IdGuruCmd.Parameters.AddWithValue("@nip", nipGuru);
+                    //executeScalar -> untuk ambil satu baris saja
                     int idGuru = Convert.ToInt32(IdGuruCmd.ExecuteScalar());
 
                     string countQuery = @"SELECT COUNT(*) 
@@ -68,6 +75,7 @@ namespace E_Raport_SMA_Pemvis_Project
                              LIMIT @limit OFFSET @offset";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@idGuru", idGuru);
                     cmd.Parameters.AddWithValue("@idKelas", idKelas);
                     cmd.Parameters.AddWithValue("@idGuru", idGuru);
                     cmd.Parameters.AddWithValue("@limit", pageSize);
@@ -113,6 +121,7 @@ namespace E_Raport_SMA_Pemvis_Project
                 selectedNilai = Convert.ToDouble(row.Cells["nilai"].Value);
                 selectedIdNilai = row.Cells["id nilai"].Value.ToString();
                 selectedMapel = row.Cells["mapel"].Value.ToString();
+
             }
         }
 
@@ -180,7 +189,13 @@ namespace E_Raport_SMA_Pemvis_Project
                 {
                     MessageBox.Show("Error saat filter data: " + ex.Message);
                 }
+
             }
+            }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            txtCari.Clear();
         }
     }
 }

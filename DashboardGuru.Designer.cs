@@ -1,3 +1,4 @@
+
 ﻿namespace E_Raport_SMA_Pemvis_Project
 {
     partial class DashboardGuru
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardGuru));
             this.groupBoxJudul = new System.Windows.Forms.GroupBox();

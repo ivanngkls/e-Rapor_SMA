@@ -1,4 +1,4 @@
-﻿namespace E_Raport_SMA_Pemvis_Project
+﻿namespace E_Raport_SMA
 {
     partial class Raport
     {
